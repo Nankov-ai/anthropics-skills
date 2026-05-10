@@ -1,7 +1,7 @@
 ---
 name: nando-global
 description: >
-  Skill global obrigatória para TODOS os projetos e conversas do Nando (Nodeflow / Norauto Portugal).
+  Skill global obrigatória para TODOS os projetos e conversas do Nando.
   Aplica SEMPRE: (1) as QA Rules P1/P2/P3 em todas as respostas, (2) consciência da legislação europeia de IA e dados (AI Act, RGPD, DSA/DMA) em qualquer task relacionada com IA, automação, marketing digital, dados ou produtos B2B.
   DEVE ser ativada em TODAS as respostas — sem exceção — independentemente do tema, idioma ou complexidade da tarefa.
   Qualquer menção a projetos, código, automações, relatórios, clientes, dados pessoais, conteúdo gerado por IA, campanhas ou decisões de negócio aciona esta skill obrigatoriamente.
@@ -65,7 +65,7 @@ Esta skill aplica-se a **todas** as respostas. Não é opcional. Cobre dois pila
 | 🟡 Risco Limitado | Chatbots, geração de imagens, clonagem de voz | Transparência obrigatória |
 | 🟢 Mínimo | Maioria das ferramentas internas | Boas práticas + literacia |
 
-#### Regras Críticas para o Contexto Nodeflow / Norauto
+#### Regras Críticas (EU — qualquer empresa)
 - **Chatbots/Agentes**: aviso explícito de interação com IA (não humano) é obrigatório.
 - **Alucinações**: a empresa que faz deploy é responsável perante o consumidor — não o provider.
 - **RGPD + LLMs**: nunca colocar dados de clientes em prompts de ferramentas externas.
