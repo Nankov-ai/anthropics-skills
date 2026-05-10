@@ -1,6 +1,6 @@
 ---
 name: aiact
-description: Referência completa sobre legislação europeia de IA para PMEs portuguesas. Usa esta skill sempre que o utilizador perguntar sobre AI Act, RGPD aplicado a IA, compliance de IA, obrigações legais de chatbots/agentes, direitos de autor em conteúdo gerado por IA, DSA/DMA, multas, ou responsabilidade de Providers vs Deployers. Contexto: SaaS B2B, marketing digital, agentes de IA, mercado português.
+description: Referência completa sobre legislação europeia de IA. Usa esta skill sempre que o utilizador perguntar sobre AI Act (Regulamento UE 2024/1689), RGPD aplicado a IA, compliance de IA, obrigações legais de chatbots/agentes, direitos de autor em conteúdo gerado por IA, DSA/DMA, multas, responsabilidade de Providers vs Deployers, ou classificação de risco de sistemas de IA. Aplicável a qualquer empresa, setor, mercado ou contexto dentro da União Europeia.
 ---
 
 # Legislação Europeia de IA — Referência Completa
@@ -54,11 +54,11 @@ Ferramentas internas, filtros de spam, IA em jogos.
 ### Responsabilidade por Alucinações
 - Se um chatbot prometer algo incorreto (ex: devolução de dinheiro, produto gratuito), a **responsabilidade é da empresa que faz deploy** — não do provider do LLM.
 - Caso real: Air Canada foi obrigada a cumprir uma promessa feita pelo seu chatbot em tribunal.
-- **Implicação para Nodeflow**: os clientes do VisionAI+ devem ser informados desta responsabilidade contratualmente.
+- A empresa que faz deploy deve informar os seus clientes desta responsabilidade contratualmente.
 
 ### Cadeia de Responsabilidade
 - A responsabilidade de informar o consumidor final e garantir o disclaimer recai sobre a **marca/empresa que interage com o cliente** — não sobre a agência ou fornecedor de tecnologia.
-- Se a Nodeflow cria um agente para um cliente, o cliente é o Deployer responsável perante o consumidor.
+- Se uma agência ou fornecedor de tecnologia cria um agente para um cliente, esse cliente é o Deployer responsável perante o consumidor.
 
 ### Providers vs. Deployers
 | Papel | Quem é | Responsabilidade |
@@ -116,7 +116,7 @@ Se a empresa gerar imagens, áudio ou vídeo com IA, especialmente se:
 ### Digital Markets Act (DMA)
 - Regula "gatekeepers" (grandes plataformas: Google, Meta, Apple, etc.).
 - Impede práticas anticoncorrenciais digitais.
-- Relevante para Nodeflow ao integrar com plataformas sujeitas ao DMA (ex: Google Workspace, LinkedIn).
+- Relevante para empresas que integram com plataformas sujeitas ao DMA (ex: Google Workspace, Meta, LinkedIn).
 
 ---
 
@@ -141,7 +141,7 @@ Não agir por medo das multas ou à espera dos prazos limite — adotar uma **po
 
 ## 7. Checklist de Compliance por Caso de Uso
 
-### Lançar um Chatbot / Agente (ex: VisionAI+)
+### Lançar um Chatbot / Agente
 - [ ] Aviso visível de interação com IA
 - [ ] Política de limitação de responsabilidade definida
 - [ ] Contrato com cliente (Deployer) clarifica responsabilidades
