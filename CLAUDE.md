@@ -112,6 +112,10 @@ A skill inclui o workflow EDD (Evaluation-Driven Development), checklists, e for
 **3. Descoberta da arquitetura de diretórios**
 As skills ativas são lidas de `C:\Users\Utilizador\.claude\skills\`, não desta pasta. As 4 skills originais já lá estavam. Faltavam 13 das novas — copiadas manualmente.
 
+**7. pt-checkout-builder — criada de screenshot de checkout SalesPark (Jun 2026)**
+Skill para construir checkout flows e integrar plataformas de pagamento para produtos digitais portugueses.
+Cobre: UX multi-step (Identificação → Opções → Pagamento), campos obrigatórios PT (NIF com validação por checksum, morada, código postal), IVA 23%, cupões de desconto, e integração com SalesPark, Stripe, EasyPay e MB Way. Inclui exemplos de código para webhooks, validação de NIF, e checklist pré-lançamento com requisitos RGPD.
+
 **6. ai-agent-patterns — extraída de imagem dos 15 padrões de design de agentes IA (Jun 2026)**
 Skill dedicada a selecionar e explicar padrões arquiteturais para sistemas de agentes IA.
 Cobre os 15 padrões: Single Agent, Sequential, Parallel, Loop, Review & Critique, Iterative Refinement, Coordinator, Hierarchical Decomposition, Swarm, ReAct, Human-in-the-Loop, Plan-and-Execute, Reflexion, Custom Logic, Event-Driven Agent.
