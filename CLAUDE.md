@@ -35,11 +35,12 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (39)
+## Skills neste repositório (42)
 
 | Skill | Origem |
 |---|---|
 | agent-prompt-builder | Original |
+| ai-agent-patterns | Criada de imagem "15 AI Agent Design Patterns" (Jun 2026) |
 | agent-reasoning | Original |
 | aiact | Original |
 | faturix | Original |
@@ -52,11 +53,13 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | code-review | Criada sessão Jun 2026 |
 | doc-coauthoring | Criada sessão Jun 2026 |
 | docx | Criada sessão Jun 2026 |
+| enterprise-ai-agent-designer | Criada de apresentação IT consulting (Jun 2026) |
 | fewer-permission-prompts | Criada sessão Jun 2026 |
 | frontend-design | Criada sessão Jun 2026 |
 | gem-builder | Criada sessão Jun 2026 |
 | init | Criada sessão Jun 2026 |
 | internal-comms | Criada sessão Jun 2026 |
+| it-consulting-proposal | Criada de apresentação IT consulting (Jun 2026) |
 | keybindings-help | Criada sessão Jun 2026 |
 | local-agent-trainer | Criada sessão Jun 2026 |
 | loop | Criada sessão Jun 2026 |
@@ -107,6 +110,16 @@ A skill inclui o workflow EDD (Evaluation-Driven Development), checklists, e for
 
 **3. Descoberta da arquitetura de diretórios**
 As skills ativas são lidas de `C:\Users\Utilizador\.claude\skills\`, não desta pasta. As 4 skills originais já lá estavam. Faltavam 13 das novas — copiadas manualmente.
+
+**6. ai-agent-patterns — extraída de imagem dos 15 padrões de design de agentes IA (Jun 2026)**
+Skill dedicada a selecionar e explicar padrões arquiteturais para sistemas de agentes IA.
+Cobre os 15 padrões: Single Agent, Sequential, Parallel, Loop, Review & Critique, Iterative Refinement, Coordinator, Hierarchical Decomposition, Swarm, ReAct, Human-in-the-Loop, Plan-and-Execute, Reflexion, Custom Logic, Event-Driven Agent.
+Inclui guia de seleção por cenário e padrões combinados.
+
+**5. enterprise-ai-agent-designer + it-consulting-proposal — extraídas de apresentação IT consulting (Jun 2026)**
+Duas skills criadas a partir de uma apresentação de uma empresa de IT consulting (conteúdo confidencial — sem nomes de pessoas ou empresas gravados).
+- `enterprise-ai-agent-designer`: desenha soluções completas de agentes IA por indústria (jurídico, farmacêutico, banca, retalho). Padrões de arquitetura com Azure OpenAI, LangChain, WSO2, etc.
+- `it-consulting-proposal`: gera propostas e pitches de consultoria IT estruturados. Cobre 7 práticas de serviço, 4 modelos de colaboração, e parcerias (Microsoft Gold, Atlassian Gold, WSO2 VAR, Google).
 
 **4. b2b-outbound-automation — extraída de transcrição de masterclass**
 Sessão de 02/06/2026 do ISCTE Executive Education (pós-graduação IA para Gestão).
