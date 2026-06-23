@@ -35,7 +35,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (42)
+## Skills neste repositório (43)
 
 | Skill | Origem |
 |---|---|
@@ -67,6 +67,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | pdf | Criada sessão Jun 2026 |
 | pptx | Criada sessão Jun 2026 |
 | prompt-builder | Criada sessão Jun 2026 |
+| pt-checkout-builder | Criada de screenshot SalesPark checkout (Jun 2026) |
 | review | Criada sessão Jun 2026 |
 | run | Criada sessão Jun 2026 |
 | schedule | Criada sessão Jun 2026 |
