@@ -30,13 +30,13 @@ Para instalar todas as skills — as deste repositório + todas as skills extern
 git clone https://github.com/Nankov-ai/anthropics-skills.git ~/.claude/skills
 
 # 2. Instalar as skills externas (gstack, stop-slop, last30days, taste-skill, hyperframes, graphifyy)
-bash ~/.claude/skills/install-external-skills.sh
+bash ~/.claude/skills/install-external-packages.sh
 
 # 3. Recarregar no Claude Code
 # /reload-skills
 ```
 
-O script `install-external-skills.sh` instala automaticamente todos os pacotes externos e o CLI graphifyy. Corre numa sessão remota do Claude Code ou em qualquer terminal com git + pip disponíveis.
+O script `install-external-packages.sh` instala automaticamente todos os pacotes externos e o CLI graphifyy. Corre numa sessão remota do Claude Code ou em qualquer terminal com git + pip disponíveis.
 
 ## Sincronização
 
@@ -171,7 +171,7 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
 
 ### Notas de instalação em ambiente remoto
-O ambiente remoto do Claude Code usa um proxy local (127.0.0.1) que bloqueia `git clone` de repos externos. Para instalar skills externas nesse ambiente, usar `curl` diretamente para raw.githubusercontent.com em vez de git clone. O `install-external-skills.sh` não funciona diretamente — o outro Claude adaptou usando curl para buscar SKILL.md individualmente. O gstack instalou 23 skills (em vez de 50+) por esta limitação.
+O ambiente remoto do Claude Code usa um proxy local (127.0.0.1) que bloqueia `git clone` de repos externos. Para instalar skills externas nesse ambiente, usar `curl` diretamente para raw.githubusercontent.com em vez de git clone. O `install-external-packages.sh` não funciona diretamente — o outro Claude adaptou usando curl para buscar SKILL.md individualmente. O gstack instalou 23 skills (em vez de 50+) por esta limitação.
 
 ## Convenções
 
