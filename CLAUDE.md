@@ -162,12 +162,16 @@ Conteúdo extraído sem nomes de clientes ou informação confidencial.
 Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → intent data → sequenciadores multicanal. Inclui o padrão "operating system" para agentes (regras lidas antes de cada ação) e a regra de human-in-the-loop antes de qualquer envio.
 
 ### Estado após sessão (Jun 2026 — sessão 2)
-- **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\`
+- **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
+- **101 skills ativas** no ambiente remoto Claude Code (via curl — proxy bloqueia git clone)
 - 43 skills neste repositório de desenvolvimento
 - 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
+
+### Notas de instalação em ambiente remoto
+O ambiente remoto do Claude Code usa um proxy local (127.0.0.1) que bloqueia `git clone` de repos externos. Para instalar skills externas nesse ambiente, usar `curl` diretamente para raw.githubusercontent.com em vez de git clone. O `install-external-skills.sh` não funciona diretamente — o outro Claude adaptou usando curl para buscar SKILL.md individualmente. O gstack instalou 23 skills (em vez de 50+) por esta limitação.
 
 ## Convenções
 
