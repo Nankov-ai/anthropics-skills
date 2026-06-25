@@ -21,6 +21,23 @@ As skills neste repositório são o source of truth. Para ficarem ativas, têm d
 
 A `description` é o algoritmo de routing — determina quando a skill dispara. É o campo mais importante.
 
+## Instalação completa (novo ambiente)
+
+Para instalar todas as skills — as deste repositório + todas as skills externas — numa nova máquina ou sessão remota:
+
+```bash
+# 1. Clonar este repositório
+git clone https://github.com/Nankov-ai/anthropics-skills.git ~/.claude/skills
+
+# 2. Instalar as skills externas (gstack, stop-slop, last30days, taste-skill, hyperframes, graphifyy)
+bash ~/.claude/skills/install-external-skills.sh
+
+# 3. Recarregar no Claude Code
+# /reload-skills
+```
+
+O script `install-external-skills.sh` instala automaticamente todos os pacotes externos e o CLI graphifyy. Corre numa sessão remota do Claude Code ou em qualquer terminal com git + pip disponíveis.
+
 ## Sincronização
 
 Para ativar uma skill nova ou atualizada:
