@@ -89,4 +89,4 @@ fi
 
 # ─── Resumo ───────────────────────────────────────────────────────────────────
 echo ""
-echo "==> Concluído! Total de skills disponíveis: $(ls -d "$DEST"/*/ | wc -l)"
+echo "==> Concluído! Total de skills disponíveis: $(ls -d \"$DEST\"/*/  | wc -l)"
