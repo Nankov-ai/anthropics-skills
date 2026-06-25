@@ -163,15 +163,24 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 
 ### Estado após sessão (Jun 2026 — sessão 2)
 - **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
-- **101 skills ativas** no ambiente remoto Claude Code (via curl — proxy bloqueia git clone)
+- **100 skills ativas** no ambiente remoto Claude Code
 - 43 skills neste repositório de desenvolvimento
 - 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
 
+### Skills no ambiente remoto (100)
+| Origem | Skills | Count |
+|--------|--------|-------|
+| nankov-ai/anthropics-skills | agent-prompt-builder, agent-reasoning, ai-agent-patterns, aiact, algorithmic-art, b2b-outbound-automation, brand-guidelines, canvas-design, claude-api, code-review, doc-coauthoring, docx, enterprise-ai-agent-designer, faturix, fewer-permission-prompts, frontend-design, gem-builder, init, internal-comms, it-consulting-proposal, keybindings-help, local-agent-trainer, loop, mcp-builder, nando-global, pdf, pptx, prompt-builder, pt-checkout-builder, review, run, schedule, security-review, simplify, skill-creator, skill-evaluator, slack-gif-creator, termos-condicoes-pt, theme-factory, update-config, verify, web-artifacts-builder, webapp-testing, xlsx | 44 |
+| gstack | gstack, autoplan, benchmark, benchmark-models, browse, canary, careful, codex, context-restore, context-save, cso, design-consultation, design-html, design-review, design-shotgun, document-generate, investigate, land-and-deploy, plan-eng-review, qa, qa-only, ship, session-start-hook | 23 |
+| taste-skill | brandkit, brutalist-skill, image-to-code-skill, imagegen-frontend-mobile, imagegen-frontend-web, minimalist-skill, output-skill, redesign-skill, soft-skill, stitch-skill, taste-skill, taste-skill-v1 | 12 |
+| hyperframes | hyperframes, hyperframes-animation, hyperframes-cli, hyperframes-core, hyperframes-creative, hyperframes-media, hyperframes-registry, embedded-captions, faceless-explainer, general-video, media-use, motion-graphics, music-to-video, pr-to-video, product-launch-video, remotion-to-hyperframes, slideshow, talking-head-recut, website-to-video | 19 |
+| outros | stop-slop, last30days | 2 |
+
 ### Notas de instalação em ambiente remoto
-O ambiente remoto do Claude Code usa um proxy local (127.0.0.1) que bloqueia `git clone` de repos externos. Para instalar skills externas nesse ambiente, usar `curl` diretamente para raw.githubusercontent.com em vez de git clone. O `install-external-packages.sh` não funciona diretamente — o outro Claude adaptou usando curl para buscar SKILL.md individualmente. O gstack instalou 23 skills (em vez de 50+) por esta limitação.
+O ambiente remoto do Claude Code usa um proxy local (127.0.0.1) que bloqueia `git clone` de repos externos. Para instalar skills externas nesse ambiente, usar `curl` diretamente para raw.githubusercontent.com em vez de git clone. O `install-external-packages.sh` não funciona diretamente — o outro Claude adaptou usando curl para buscar SKILL.md individualmente. O gstack instalou 23 skills (em vez de 50+) por esta limitação. O ficheiro `install-external-skills.sh` (criado pelo outro Claude) foi removido para evitar confusão.
 
 ## Convenções
 
