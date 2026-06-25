@@ -35,7 +35,9 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (43)
+## Skills neste repositório (43) + skills externas instaladas globalmente
+
+### Skills desenvolvidas neste repositório (43)
 
 | Skill | Origem |
 |---|---|
@@ -82,6 +84,17 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | webapp-testing | Criada sessão Jun 2026 |
 | web-artifacts-builder | Criada sessão Jun 2026 |
 | xlsx | Criada sessão Jun 2026 |
+
+### Skills externas instaladas globalmente (Jun 2026)
+Instaladas diretamente em `C:\Users\Utilizador\.claude\skills\` — não estão neste repositório.
+
+| Pacote | Skills | Fonte |
+|--------|--------|-------|
+| **gstack** (garrytan/gstack) | 50+ skills: office-hours, plan-ceo-review, plan-eng-review, plan-design-review, autoplan, review, ship, land-and-deploy, qa, qa-only, browse, scrape, cso, design-consultation, design-shotgun, design-html, design-review, investigate, health, document-generate, document-release, make-pdf, retro, spec, codex, freeze, guard, careful, learn, context-save, context-restore, benchmark, canary, devex-review, diagram, skillify, pair-agent, ios-fix, ios-qa, ios-design-review, ios-sync, ios-clean, setup-deploy, setup-gbrain, setup-browser-cookies, sync-gbrain, gstack-upgrade | github.com/garrytan/gstack |
+| **stop-slop** (hardikpandya/stop-slop) | stop-slop | github.com/hardikpandya/stop-slop |
+| **last30days** (mvanhorn/last30days-skill) | last30days | github.com/mvanhorn/last30days-skill |
+| **taste-skill** (Leonxlnx/taste-skill) | taste-skill, taste-skill-v1, minimalist-skill, brutalist-skill, soft-skill, redesign-skill, image-to-code-skill, stitch-skill, brandkit, output-skill, imagegen-frontend-web, imagegen-frontend-mobile | github.com/Leonxlnx/taste-skill |
+| **hyperframes** (heygen-com/hyperframes) | hyperframes, hyperframes-core, hyperframes-animation, hyperframes-creative, hyperframes-media, hyperframes-cli, hyperframes-registry, general-video, product-launch-video, website-to-video, pr-to-video, faceless-explainer, motion-graphics, music-to-video, slideshow, embedded-captions, graphic-overlays, media-use, remotion-to-hyperframes | github.com/heygen-com/hyperframes |
 
 ## Histórico da sessão de criação (Jun 2026)
 
@@ -131,9 +144,13 @@ Sessão de 02/06/2026 do ISCTE Executive Education (pós-graduação IA para Ges
 Conteúdo extraído sem nomes de clientes ou informação confidencial.
 Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → intent data → sequenciadores multicanal. Inclui o padrão "operating system" para agentes (regras lidas antes de cada ação) e a regra de human-in-the-loop antes de qualquer envio.
 
-### Estado após sessão
-- **70 skills ativas** em `C:\Users\Utilizador\.claude\skills\`
-- 39 skills neste repositório de desenvolvimento
+### Estado após sessão (Jun 2026 — sessão 2)
+- **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\`
+- 43 skills neste repositório de desenvolvimento
+- 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
+- `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
+- `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
+- VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
 
 ## Convenções
 
