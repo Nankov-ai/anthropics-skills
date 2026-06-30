@@ -180,6 +180,129 @@ task better — it rebuilt how it approaches the task.
 
 ---
 
+## Failure classification — decision tree
+
+When evaluation fails, classify the failure before retrying. Wrong diagnosis =
+wrong fix = wasted attempt.
+
+```
+Agent Evaluation
+      ↓
+  ┌───┴───────────────────────────────────┐
+PASS   FAIL: Missing   FAIL: Tool   FAIL: Low    FAIL:
+       Context         Error        Confidence   Recoverable
+  ↓         ↓              ↓             ↓            ↓
+Finalize  Retrieve      Revise        Escalate     Retry
+          More          Action        to user      with memory
+```
+
+| Failure type | Cause | Next action |
+|---|---|---|
+| Missing context | Agent lacked info to act correctly | Retrieve more — docs, files, prior state |
+| Tool error | Tool call broke or returned wrong fields | Revise the action — fix arguments or switch tool |
+| Low confidence | Agent unsure, output unreliable | Escalate — don't guess on high-stakes tasks |
+| Recoverable issue | Transient error (rate limit, timeout) | Retry with same context + note in journal |
+
+---
+
+## The 4 prompt templates
+
+Ready to use. Drop into the loop charter or `/improve` command.
+
+### Prompt 1 — Evaluation-aware action
+```
+You are executing a task inside a bounded workflow.
+Your goal is not just to produce an answer, but to produce an answer
+that will pass evaluation.
+If information is missing, ask for it or retrieve it.
+If the result is uncertain, do not finalize confidently.
+If a previous attempt failed, avoid repeating the same strategy
+unless the context changed.
+```
+
+### Prompt 2 — Failure diagnosis
+```
+The previous attempt failed.
+Classify the likely failure reason into one of these categories:
+- missing context
+- tool misuse
+- bad assumption
+- incomplete output
+- formatting or schema failure
+- policy conflict
+
+Then propose the smallest next change that improves the odds of success.
+```
+
+### Prompt 3 — Revision
+```
+Revise the next attempt using the evaluator feedback below.
+Do not repeat the same reasoning path if it already failed.
+Prefer a narrower, more grounded solution.
+If needed, retrieve more context before answering.
+```
+
+### Prompt 4 — Memory summary
+```
+Summarize the last attempt into a short memory block for the next run.
+Include only:
+- what failed
+- what worked
+- what should be avoided
+- what should be tried next
+Keep it under 120 words.
+```
+
+---
+
+## Signal taxonomy — what to use as improvement signals
+
+Not all signals are equal. Combine at least two categories.
+
+| Category | Examples |
+|---|---|
+| **Deterministic** | Tests pass/fail, schema validates, API returns 200, required fields present |
+| **Workflow** | Retry count, tool latency, step where failure occurred, escalation frequency |
+| **Human** | Thumbs up/down, corrected output, accepted vs rejected draft, reviewer notes |
+| **Comparative** | Version A vs B output quality, score improvement over runs, tool path comparison |
+
+Feed wrong signals → agent optimizes in wrong direction. Deterministic signals
+are the most reliable baseline. Add human signals when stakes are high.
+
+---
+
+## Build sequence — 8 steps in order
+
+Build in this order. Do not skip to step 5 before step 3 exists.
+
+1. **Define success** — what does a good result look like? Be specific and measurable.
+2. **Classify failure categories** — why does this agent usually fail? Name them.
+3. **Build the evaluator first** — how will the system know it succeeded or failed?
+4. **Design memory rules** — what persists between attempts? Compress, don't dump.
+5. **Define retry strategy** — what changes between attempt 1 and attempt 2?
+6. **Add escalation logic** — when should a human step in?
+7. **Log everything important** — you cannot improve what you do not observe.
+8. **Optimize only after the loop works** — do not overcomplicate before the core cycle is stable.
+
+---
+
+## Self-improving agent checklist
+
+Before calling an agent "self-improving", verify:
+
+- [ ] Agent knows what success looks like
+- [ ] It evaluates each attempt (not just produces output)
+- [ ] It stores useful lessons from failure
+- [ ] It changes strategy based on feedback
+- [ ] It avoids repeating the same failed path blindly
+- [ ] It knows when to stop
+- [ ] It knows when to escalate to a human
+- [ ] You can measure whether it is actually getting better
+
+If most are missing, the system is iterative — not self-improving.
+
+---
+
 ## Relation to `/goal` and `/loop`
 
 | | `/goal` | `/loop` | `/improve` |
