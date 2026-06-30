@@ -1,15 +1,15 @@
 ---
 name: self-improving-loop
 description: >
-  Build a self-improving Claude Code loop that engineers itself between runs:
-  remembers lessons across runs, grades its own output honestly with a fresh
-  skeptical subagent, rewrites its own rules when the same weakness appears
-  twice, and stops when improvement converges. Use when the user wants to build
-  an agent that gets better over time without re-explaining it, wants to set up
-  a /improve command, needs a self-grading loop, asks about self-journal.md,
-  honest-grader subagent, self-rules.md, or convergence stop conditions.
-  Also triggers when the user asks how to make an agent that learns from its
-  own mistakes, compounds across runs, or engineers itself.
+  Build a loop that improves its own process between runs — not just the output.
+  Use when the user wants an agent that compounds over time: remembers lessons
+  across runs (self-journal.md), grades output with a fresh skeptical subagent
+  (honest-grader), rewrites its own rules when the same weakness appears twice
+  (self-rules.md), and stops when improvement converges (/improve command).
+  Also triggers for: self-journal, honest-grader, convergence stop condition,
+  GEPA, failure classification, signal taxonomy, or "make the agent learn from
+  its own mistakes". Does NOT cover single-task /goal or /loop interval — see
+  loop-engineering for that.
 ---
 
 # Self-Improving Loop

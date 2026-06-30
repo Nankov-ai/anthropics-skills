@@ -1,7 +1,10 @@
 ﻿---
 name: review
 description: >
-  General code and content review. Use when the user wants feedback on code, writing, or a document.
+  Review prose, documents, specs, designs, or written content for clarity,
+  completeness, consistency, and risk. Use when the user wants feedback on
+  writing, a document, a spec, or a design — not on code diffs or PRs.
+  For code diffs use /code-review. For security audits use /security-review.
 ---
 
 # Review

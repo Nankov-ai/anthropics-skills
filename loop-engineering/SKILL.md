@@ -5,10 +5,10 @@ description: >
   Use when the user wants to automate a repetitive multi-step task, run work
   overnight or on a schedule, verify sources or links automatically, process
   a backlog of items, or stop babysitting Claude turn by turn. Also triggers
-  when the user asks about loop engineering, autonomous agents, /goal command,
-  self-checking loops, loop charter, LOOP-STATE.md, or wants Claude to "keep
-  working until done". Key insight: prompting is doing the work — loop
-  engineering is managing the worker.
+  for: /loop with an interval (e.g. /loop 5m /command), loop charter,
+  LOOP-STATE.md, /goal command, self-checking loops, or wanting Claude to
+  "keep working until done". Does NOT cover self-improvement across runs or
+  honest-grader — see self-improving-loop for that.
 ---
 
 # Loop Engineering

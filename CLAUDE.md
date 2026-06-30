@@ -52,9 +52,15 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (46) + skills externas instaladas globalmente
+## Skills neste repositório (43) + skills externas instaladas globalmente
 
-### Skills desenvolvidas neste repositório (45)
+> **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
+> Para reverter: `git checkout pre-optimization-2026-06-30`
+> Otimização de 30 Jun 2026: removidas `loop` (absorvida em `loop-engineering`) e
+> `prompt-builder` (vazia); descriptions afinadas em `review`, `loop-engineering`,
+> `self-improving-loop` para eliminar routing conflicts.
+
+### Skills desenvolvidas neste repositório (43)
 
 | Skill | Origem |
 |---|---|
@@ -70,6 +76,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | canvas-design | Criada sessão Jun 2026 |
 | claude-api | Criada sessão Jun 2026 |
 | code-review | Criada sessão Jun 2026 |
+| context-engineering | Criada de artigo e imagens sobre context engineering — contexto primeiro, prompt depois (Jun 2026) |
 | doc-coauthoring | Criada sessão Jun 2026 |
 | docx | Criada sessão Jun 2026 |
 | enterprise-ai-agent-designer | Criada de apresentação IT consulting (Jun 2026) |
@@ -81,23 +88,21 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | it-consulting-proposal | Criada de apresentação IT consulting (Jun 2026) |
 | keybindings-help | Criada sessão Jun 2026 |
 | local-agent-trainer | Criada sessão Jun 2026 |
-| loop | Criada sessão Jun 2026 |
-| loop-engineering | Criada de artigo sobre loop engineering com /goal e /loop (Jun 2026) |
-| self-improving-loop | Criada de artigo sobre self-improving loops com honest-grader e self-journal (Jun 2026) |
-| context-engineering | Criada de artigo e imagens sobre context engineering — contexto primeiro, prompt depois (Jun 2026) |
+| loop-engineering | Criada de artigo sobre loop engineering com /goal e /loop; absorveu skill `loop` (Jun 2026) |
 | mcp-builder | Criada sessão Jun 2026 |
 | pdf | Criada sessão Jun 2026 |
 | pptx | Criada sessão Jun 2026 |
-| prompt-builder | Criada sessão Jun 2026 |
 | pt-checkout-builder | Criada de screenshot SalesPark checkout (Jun 2026) |
-| review | Criada sessão Jun 2026 |
+| review | Criada sessão Jun 2026 — limitada a prosa/docs/specs (não código) |
 | run | Criada sessão Jun 2026 |
 | schedule | Criada sessão Jun 2026 |
 | security-review | Criada sessão Jun 2026 |
+| self-improving-loop | Criada de artigo sobre self-improving loops com honest-grader e self-journal (Jun 2026) |
 | simplify | Criada sessão Jun 2026 |
 | skill-creator | Criada sessão Jun 2026 |
 | skill-evaluator | Criada de whitepaper Agent Skills (Google/Anthropic, Mai 2026) |
 | slack-gif-creator | Criada sessão Jun 2026 |
+| termos-condicoes-pt | Criada sessão Jun 2026 |
 | theme-factory | Criada sessão Jun 2026 |
 | update-config | Criada sessão Jun 2026 |
 | verify | Criada sessão Jun 2026 |
