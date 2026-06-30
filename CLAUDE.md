@@ -52,9 +52,9 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (44) + skills externas instaladas globalmente
+## Skills neste repositório (45) + skills externas instaladas globalmente
 
-### Skills desenvolvidas neste repositório (43)
+### Skills desenvolvidas neste repositório (44)
 
 | Skill | Origem |
 |---|---|
@@ -83,6 +83,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | local-agent-trainer | Criada sessão Jun 2026 |
 | loop | Criada sessão Jun 2026 |
 | loop-engineering | Criada de artigo sobre loop engineering com /goal e /loop (Jun 2026) |
+| self-improving-loop | Criada de artigo sobre self-improving loops com honest-grader e self-journal (Jun 2026) |
 | mcp-builder | Criada sessão Jun 2026 |
 | pdf | Criada sessão Jun 2026 |
 | pptx | Criada sessão Jun 2026 |
