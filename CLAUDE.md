@@ -169,19 +169,38 @@ Sessão de 02/06/2026 do ISCTE Executive Education (pós-graduação IA para Ges
 Conteúdo extraído sem nomes de clientes ou informação confidencial.
 Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → intent data → sequenciadores multicanal. Inclui o padrão "operating system" para agentes (regras lidas antes de cada ação) e a regra de human-in-the-loop antes de qualquer envio.
 
-### Estado após sessão (Jun 2026 — sessão 2)
+### Estado após sessão (Jul 2026 — sessão 3)
 - **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
 - **100 skills ativas** no ambiente remoto Claude Code
-- 43 skills neste repositório de desenvolvimento
+- **43 skills** neste repositório (após otimização de 30 Jun 2026)
 - 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
+- Comando global `/analyze` criado em `~/.claude/commands/analyze.md` (dispatch automático de skills por projeto)
+- Ponto de restauro: tag `pre-optimization-2026-06-30` no GitHub
+
+### Sessão 3 — o que foi feito (Jun–Jul 2026)
+
+**Skills criadas:**
+- `loop-engineering` — /goal e /loop commands, charter template, LOOP-STATE.md
+- `self-improving-loop` — honest-grader subagent, self-journal.md, self-rules.md, /improve command; estendida com failure taxonomy, 4 prompt templates, signal taxonomy, build sequence
+- `context-engineering` — 5-layer model, context-first decision flow, cascade failure diagram, retrieval/memory/tool output guidelines
+
+**Otimização de routing (30 Jun 2026):**
+- Removida `loop` (absorvida em `loop-engineering`)
+- Removida `prompt-builder` (estava vazia)
+- Descriptions afinadas: `review` (só prosa/docs), `loop-engineering` e `self-improving-loop` (boundaries explícitos entre si)
+
+**Comando `/analyze`:**
+- Criado em `~/.claude/commands/analyze.md` e em `commands/analyze.md` no repo
+- Lê o projeto, mapeia skills relevantes, aplica-as com análise real
+- Nota: funciona no Claude Code CLI; no Antigravity IDE usar linguagem natural ("analisa este projeto")
 
 ### Skills no ambiente remoto (100)
 | Origem | Skills | Count |
 |--------|--------|-------|
-| nankov-ai/anthropics-skills | agent-prompt-builder, agent-reasoning, ai-agent-patterns, aiact, algorithmic-art, b2b-outbound-automation, brand-guidelines, canvas-design, claude-api, code-review, doc-coauthoring, docx, enterprise-ai-agent-designer, faturix, fewer-permission-prompts, frontend-design, gem-builder, init, internal-comms, it-consulting-proposal, keybindings-help, local-agent-trainer, loop, mcp-builder, nando-global, pdf, pptx, prompt-builder, pt-checkout-builder, review, run, schedule, security-review, simplify, skill-creator, skill-evaluator, slack-gif-creator, termos-condicoes-pt, theme-factory, update-config, verify, web-artifacts-builder, webapp-testing, xlsx | 44 |
+| nankov-ai/anthropics-skills | agent-prompt-builder, agent-reasoning, ai-agent-patterns, aiact, algorithmic-art, b2b-outbound-automation, brand-guidelines, canvas-design, claude-api, code-review, context-engineering, doc-coauthoring, docx, enterprise-ai-agent-designer, faturix, fewer-permission-prompts, frontend-design, gem-builder, init, internal-comms, it-consulting-proposal, keybindings-help, local-agent-trainer, loop-engineering, mcp-builder, nando-global, pdf, pptx, pt-checkout-builder, review, run, schedule, security-review, self-improving-loop, simplify, skill-creator, skill-evaluator, slack-gif-creator, termos-condicoes-pt, theme-factory, update-config, verify, web-artifacts-builder, webapp-testing, xlsx | 43 |
 | gstack | gstack, autoplan, benchmark, benchmark-models, browse, canary, careful, codex, context-restore, context-save, cso, design-consultation, design-html, design-review, design-shotgun, document-generate, investigate, land-and-deploy, plan-eng-review, qa, qa-only, ship, session-start-hook | 23 |
 | taste-skill | brandkit, brutalist-skill, image-to-code-skill, imagegen-frontend-mobile, imagegen-frontend-web, minimalist-skill, output-skill, redesign-skill, soft-skill, stitch-skill, taste-skill, taste-skill-v1 | 12 |
 | hyperframes | hyperframes, hyperframes-animation, hyperframes-cli, hyperframes-core, hyperframes-creative, hyperframes-media, hyperframes-registry, embedded-captions, faceless-explainer, general-video, media-use, motion-graphics, music-to-video, pr-to-video, product-launch-video, remotion-to-hyperframes, slideshow, talking-head-recut, website-to-video | 19 |
