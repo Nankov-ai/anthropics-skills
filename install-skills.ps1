@@ -1,14 +1,11 @@
 # install-skills.ps1 — Instala todas as skills no Claude Code (Windows)
 # Executar: powershell -ExecutionPolicy Bypass -File install-skills.ps1
 #
-# Faz download de todas as skills de Nankov-ai/anthropics-skills + skills oficiais Anthropic.
+# Faz download de todas as skills de Nankov-ai/anthropics-skills.
 # Sem conteudo embutido — encoding sempre correto.
 
 $DEST     = "$env:USERPROFILE\.claude\skills"
 $REPO_RAW = "https://raw.githubusercontent.com/Nankov-ai/anthropics-skills/main"
-$ANTH_RAW = "https://raw.githubusercontent.com/anthropics/skills/main/skills"
-
-$utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 
 function Download-File {
     param([string]$Uri, [string]$OutPath)
@@ -24,70 +21,159 @@ function Download-File {
 Write-Host "==> A criar directorio de skills..." -ForegroundColor Cyan
 New-Item -ItemType Directory -Force -Path $DEST | Out-Null
 
-# ─── 1. Skills do repositorio Nankov-ai/anthropics-skills ─────────────────────
+# ─── Skills (137 total) ────────────────────────────────────────────────────────
 Write-Host ""
-Write-Host "==> A instalar skills personalizadas (Nankov-ai/anthropics-skills)..." -ForegroundColor Cyan
+Write-Host "==> A instalar todas as skills (Nankov-ai/anthropics-skills)..." -ForegroundColor Cyan
 
-$customSkills = @(
+$skills = @(
     # skill-name, @(extra files relative to skill folder)
-    @{ name = "agent-prompt-builder"; extras = @("references/nodeflow-agent-patterns.md", "references/platforms.md") },
-    @{ name = "agent-reasoning";       extras = @() },
-    @{ name = "ai-agent-patterns";     extras = @() },
-    @{ name = "aiact";                 extras = @() },
-    @{ name = "algorithmic-art";       extras = @() },
-    @{ name = "b2b-outbound-automation"; extras = @() },
-    @{ name = "brand-guidelines";      extras = @() },
-    @{ name = "canvas-design";         extras = @() },
-    @{ name = "claude-api";            extras = @() },
-    @{ name = "code-review";           extras = @() },
-    @{ name = "context-engineering";   extras = @() },
-    @{ name = "doc-coauthoring";       extras = @() },
-    @{ name = "docx";                  extras = @() },
+    @{ name = "_gstack-command";              extras = @() },
+    @{ name = "agent-prompt-builder";         extras = @("references/nodeflow-agent-patterns.md","references/platforms.md") },
+    @{ name = "agent-reasoning";              extras = @() },
+    @{ name = "ai-agent-patterns";            extras = @() },
+    @{ name = "ai-video-creator";             extras = @() },
+    @{ name = "aiact";                        extras = @() },
+    @{ name = "algorithmic-art";              extras = @() },
+    @{ name = "autoplan";                     extras = @() },
+    @{ name = "b2b-outbound-automation";      extras = @() },
+    @{ name = "benchmark";                    extras = @() },
+    @{ name = "benchmark-models";             extras = @() },
+    @{ name = "brand-guidelines";             extras = @() },
+    @{ name = "brandkit";                     extras = @() },
+    @{ name = "browse";                       extras = @() },
+    @{ name = "brutalist-skill";              extras = @() },
+    @{ name = "canary";                       extras = @() },
+    @{ name = "canvas-design";                extras = @() },
+    @{ name = "careful";                      extras = @() },
+    @{ name = "claude-api";                   extras = @() },
+    @{ name = "code-review";                  extras = @() },
+    @{ name = "codex";                        extras = @() },
+    @{ name = "context-engineering";          extras = @() },
+    @{ name = "context-restore";              extras = @() },
+    @{ name = "context-save";                 extras = @() },
+    @{ name = "cso";                          extras = @() },
+    @{ name = "design-consultation";          extras = @() },
+    @{ name = "design-html";                  extras = @() },
+    @{ name = "design-review";                extras = @() },
+    @{ name = "design-shotgun";               extras = @() },
+    @{ name = "devex-review";                 extras = @() },
+    @{ name = "diagram";                      extras = @() },
+    @{ name = "doc-coauthoring";              extras = @() },
+    @{ name = "document-generate";            extras = @() },
+    @{ name = "document-release";             extras = @() },
+    @{ name = "docx";                         extras = @() },
+    @{ name = "embedded-captions";            extras = @() },
     @{ name = "enterprise-ai-agent-designer"; extras = @() },
-    @{ name = "faturix";               extras = @() },
-    @{ name = "fewer-permission-prompts"; extras = @() },
-    @{ name = "frontend-design";       extras = @() },
-    @{ name = "gem-builder";           extras = @() },
-    @{ name = "init";                  extras = @() },
-    @{ name = "internal-comms";        extras = @() },
-    @{ name = "it-consulting-proposal"; extras = @() },
-    @{ name = "keybindings-help";      extras = @() },
-    @{ name = "local-agent-trainer";   extras = @() },
-    @{ name = "loop-engineering";      extras = @() },
-    @{ name = "mcp-builder";           extras = @() },
-    @{ name = "nando-global";          extras = @() },
-    @{ name = "notebooklm";            extras = @() },
-    @{ name = "pdf";                   extras = @() },
-    @{ name = "pptx";                  extras = @() },
-    @{ name = "pt-checkout-builder";   extras = @() },
-    @{ name = "review";                extras = @() },
-    @{ name = "run";                   extras = @() },
-    @{ name = "schedule";              extras = @() },
-    @{ name = "security-review";       extras = @() },
-    @{ name = "self-improving-loop";   extras = @() },
-    @{ name = "simplify";              extras = @() },
-    @{ name = "skill-creator";         extras = @() },
-    @{ name = "skill-evaluator";       extras = @("references/description-checklist.md", "references/failure-modes.md") },
-    @{ name = "slack-gif-creator";     extras = @() },
-    @{ name = "termos-condicoes-pt";   extras = @() },
-    @{ name = "theme-factory";         extras = @() },
-    @{ name = "update-config";         extras = @() },
-    @{ name = "verify";                extras = @() },
-    @{ name = "web-artifacts-builder"; extras = @() },
-    @{ name = "webapp-testing";        extras = @() },
-    @{ name = "xlsx";                  extras = @() }
+    @{ name = "faceless-explainer";           extras = @() },
+    @{ name = "faturix";                      extras = @() },
+    @{ name = "fewer-permission-prompts";     extras = @() },
+    @{ name = "freeze";                       extras = @() },
+    @{ name = "frontend-design";              extras = @() },
+    @{ name = "gem-builder";                  extras = @() },
+    @{ name = "general-video";                extras = @() },
+    @{ name = "graphic-overlays";             extras = @() },
+    @{ name = "gstack";                       extras = @() },
+    @{ name = "gstack-upgrade";               extras = @() },
+    @{ name = "guard";                        extras = @() },
+    @{ name = "health";                       extras = @() },
+    @{ name = "hyperframes";                  extras = @() },
+    @{ name = "hyperframes-animation";        extras = @() },
+    @{ name = "hyperframes-cli";              extras = @() },
+    @{ name = "hyperframes-core";             extras = @() },
+    @{ name = "hyperframes-creative";         extras = @() },
+    @{ name = "hyperframes-media";            extras = @() },
+    @{ name = "hyperframes-registry";         extras = @() },
+    @{ name = "image-to-code-skill";          extras = @() },
+    @{ name = "imagegen-frontend-mobile";     extras = @() },
+    @{ name = "imagegen-frontend-web";        extras = @() },
+    @{ name = "init";                         extras = @() },
+    @{ name = "internal-comms";              extras = @() },
+    @{ name = "investigate";                  extras = @() },
+    @{ name = "ios-clean";                    extras = @() },
+    @{ name = "ios-design-review";            extras = @() },
+    @{ name = "ios-fix";                      extras = @() },
+    @{ name = "ios-qa";                       extras = @() },
+    @{ name = "ios-sync";                     extras = @() },
+    @{ name = "it-consulting-proposal";       extras = @() },
+    @{ name = "keybindings-help";             extras = @() },
+    @{ name = "land-and-deploy";              extras = @() },
+    @{ name = "landing-report";              extras = @() },
+    @{ name = "last30days";                   extras = @() },
+    @{ name = "learn";                        extras = @() },
+    @{ name = "local-agent-trainer";          extras = @() },
+    @{ name = "loop";                         extras = @() },
+    @{ name = "loop-engineering";             extras = @() },
+    @{ name = "make-pdf";                     extras = @() },
+    @{ name = "mcp-builder";                  extras = @() },
+    @{ name = "media-use";                    extras = @() },
+    @{ name = "minimalist-skill";             extras = @() },
+    @{ name = "motion-graphics";              extras = @() },
+    @{ name = "music-to-video";               extras = @() },
+    @{ name = "nando-global";                 extras = @() },
+    @{ name = "notebooklm";                   extras = @() },
+    @{ name = "office-hours";                 extras = @() },
+    @{ name = "open-gstack-browser";          extras = @() },
+    @{ name = "output-skill";                 extras = @() },
+    @{ name = "pair-agent";                   extras = @() },
+    @{ name = "pdf";                          extras = @("forms.md","reference.md") },
+    @{ name = "plan-ceo-review";              extras = @() },
+    @{ name = "plan-design-review";           extras = @() },
+    @{ name = "plan-devex-review";            extras = @() },
+    @{ name = "plan-eng-review";              extras = @() },
+    @{ name = "plan-tune";                    extras = @() },
+    @{ name = "pptx";                         extras = @() },
+    @{ name = "pr-to-video";                  extras = @() },
+    @{ name = "product-launch-video";         extras = @() },
+    @{ name = "prompt-builder";               extras = @() },
+    @{ name = "pt-checkout-builder";          extras = @() },
+    @{ name = "qa";                           extras = @() },
+    @{ name = "qa-only";                      extras = @() },
+    @{ name = "redesign-skill";               extras = @() },
+    @{ name = "remotion-to-hyperframes";      extras = @() },
+    @{ name = "retro";                        extras = @() },
+    @{ name = "review";                       extras = @() },
+    @{ name = "run";                          extras = @() },
+    @{ name = "schedule";                     extras = @() },
+    @{ name = "scrape";                       extras = @() },
+    @{ name = "security-review";              extras = @() },
+    @{ name = "self-improving-loop";          extras = @() },
+    @{ name = "setup-browser-cookies";        extras = @() },
+    @{ name = "setup-deploy";                 extras = @() },
+    @{ name = "setup-gbrain";                 extras = @() },
+    @{ name = "ship";                         extras = @() },
+    @{ name = "simplify";                     extras = @() },
+    @{ name = "skill-creator";                extras = @() },
+    @{ name = "skill-evaluator";              extras = @("references/description-checklist.md","references/failure-modes.md") },
+    @{ name = "skillify";                     extras = @() },
+    @{ name = "slack-gif-creator";            extras = @() },
+    @{ name = "slideshow";                    extras = @() },
+    @{ name = "soft-skill";                   extras = @() },
+    @{ name = "spec";                         extras = @() },
+    @{ name = "stitch-skill";                 extras = @() },
+    @{ name = "stop-slop";                    extras = @() },
+    @{ name = "sync-gbrain";                  extras = @() },
+    @{ name = "taste-skill";                  extras = @() },
+    @{ name = "taste-skill-v1";               extras = @() },
+    @{ name = "termos-condicoes-pt";          extras = @() },
+    @{ name = "theme-factory";                extras = @() },
+    @{ name = "unfreeze";                     extras = @() },
+    @{ name = "update-config";                extras = @() },
+    @{ name = "verify";                       extras = @() },
+    @{ name = "visual-content-transformer";   extras = @() },
+    @{ name = "web-artifacts-builder";        extras = @() },
+    @{ name = "webapp-testing";               extras = @() },
+    @{ name = "website-to-video";             extras = @() },
+    @{ name = "xlsx";                         extras = @() }
 )
 
 $ok = 0; $err = 0
 
-foreach ($skill in $customSkills) {
+foreach ($skill in $skills) {
     $name = $skill.name
     $dir  = "$DEST\$name"
     New-Item -ItemType Directory -Force -Path $dir | Out-Null
 
-    $uri = "$REPO_RAW/$name/SKILL.md"
-    if (Download-File -Uri $uri -OutPath "$dir\SKILL.md") {
-        # extra reference files
+    if (Download-File -Uri "$REPO_RAW/$name/SKILL.md" -OutPath "$dir\SKILL.md") {
         foreach ($extra in $skill.extras) {
             $extraDir = Split-Path "$dir\$extra" -Parent
             New-Item -ItemType Directory -Force -Path $extraDir | Out-Null
@@ -100,46 +186,6 @@ foreach ($skill in $customSkills) {
         $err++
     }
 }
-
-# ─── 2. Skills oficiais Anthropic (nao existem no repo Nankov-ai) ──────────────
-Write-Host ""
-Write-Host "==> A instalar skills oficiais Anthropic..." -ForegroundColor Cyan
-
-# Estas skills sao descarregadas do repo oficial anthropics/skills
-# porque nao estao duplicadas no repo Nankov-ai (sem personalizacoes)
-$anthropicOnly = @(
-    "doc-coauthoring",
-    "slack-gif-creator",
-    "theme-factory",
-    "web-artifacts-builder",
-    "webapp-testing"
-)
-
-# Nota: a maioria das skills Anthropic ja esta no repo Nankov-ai com o mesmo conteudo.
-# Estas 5 sao instaladas do repo oficial como backup caso o Nankov-ai nao as tenha atualizado.
-# Comentar este bloco se quiser usar apenas o repo Nankov-ai.
-
-foreach ($skill in $anthropicOnly) {
-    $dir = "$DEST\$skill"
-    New-Item -ItemType Directory -Force -Path $dir | Out-Null
-    $uri = "$ANTH_RAW/$skill/SKILL.md"
-    # Nao sobrescreve se ja foi instalada do repo Nankov-ai
-    if (-not (Test-Path "$dir\SKILL.md")) {
-        if (Download-File -Uri $uri -OutPath "$dir\SKILL.md") {
-            Write-Host "  OK $skill (Anthropic)" -ForegroundColor DarkGreen
-        } else {
-            Write-Host "  SKIP $skill (nao encontrada)" -ForegroundColor DarkYellow
-        }
-    } else {
-        Write-Host "  SKIP $skill (ja instalada do repo Nankov-ai)" -ForegroundColor DarkYellow
-    }
-}
-
-# pdf tem ficheiros extra no repo oficial
-$pdfDir = "$DEST\pdf"
-New-Item -ItemType Directory -Force -Path $pdfDir | Out-Null
-Download-File -Uri "$ANTH_RAW/pdf/forms.md"     -OutPath "$pdfDir\forms.md"     | Out-Null
-Download-File -Uri "$ANTH_RAW/pdf/reference.md" -OutPath "$pdfDir\reference.md" | Out-Null
 
 # ─── Resultado ────────────────────────────────────────────────────────────────
 $total = (Get-ChildItem -Directory $DEST).Count
