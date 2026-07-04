@@ -178,11 +178,11 @@ Conteúdo extraído sem nomes de clientes ou informação confidencial.
 Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → intent data → sequenciadores multicanal. Inclui o padrão "operating system" para agentes (regras lidas antes de cada ação) e a regra de human-in-the-loop antes de qualquer envio.
 
 ### Estado após sessão (Jul 2026 — sessão 4)
-- **137 skills** neste repositório — fonte única de verdade
-- `install-skills.ps1` reescrito para cobrir todas as 137 skills
+- **137 skills** no repo `Nankov-ai/anthropics-skills` — fonte única de verdade
+- **137 skills** em `C:\Users\Utilizador\.claude\skills\` — 100% em sync com o repo
+- `install-skills.ps1` reescrito para cobrir todas as 137 skills (script único para nova máquina)
 - Skills de terceiros (gstack, hyperframes, taste-skill, stop-slop, last30days) integradas no repo
-- autoplan atualizado (gstack latest: 1853 linhas) e hyperframes atualizado (heygen latest: 166 linhas)
-- Grupo B (10 skills GitHub-only) instaladas localmente
+- `autoplan` atualizado da fonte gstack (1853 linhas) e `hyperframes` atualizado da fonte heygen (166 linhas)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
@@ -211,6 +211,21 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - Criado em `~/.claude/commands/analyze.md` e em `commands/analyze.md` no repo
 - Lê o projeto, mapeia skills relevantes, aplica-as com análise real
 - Nota: funciona no Claude Code CLI; no Antigravity IDE usar linguagem natural ("analisa este projeto")
+
+### Sessão 4 — o que foi feito (Jul 2026)
+
+**Grande sincronização repo ↔ local:**
+- Fase 0: verificação de updates nas fontes originais — `autoplan` (gstack) e `hyperframes` (heygen) atualizados
+- Fase 1: 108 skills copiadas para o repo e pushed (19 versões locais ricas + 89 skills de terceiros)
+- Fase 2: 10 skills Grupo B (existiam no repo mas não no local) instaladas localmente
+- Fase 3: `install-skills.ps1` reescrito — cobre todas as 137 skills, script único para nova máquina
+- Fase 4: CLAUDE.md atualizado, repo pushed — 137 skills em repo e local, 100% em sync
+
+**Resultado:** numa nova máquina, um único comando instala as 137 skills:
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Nankov-ai/anthropics-skills/main/install-skills.ps1" -OutFile "install-skills.ps1"
+powershell -ExecutionPolicy Bypass -File install-skills.ps1
+```
 
 ### Skills no ambiente remoto (100)
 | Origem | Skills | Count |
