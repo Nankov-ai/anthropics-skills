@@ -56,6 +56,88 @@ See references/platforms.md and references/nodeflow-agent-patterns.md
 
 ---
 
+## Superagent prompts (Manus and similar autonomous agents)
+
+Use when prompting a **superagent** — an AI that can autonomously browse, write code,
+create files, and complete multi-step tasks from a single detailed instruction.
+
+Unlike Lovable (which requires 6+ sequential prompts), a superagent receives **one
+complete prompt** and works autonomously until the task is done.
+
+### Key difference vs standard prompts
+
+| Lovable / GPT | Manus / Superagent |
+|---|---|
+| Iterative: prompt → review → next prompt | One shot: full spec upfront |
+| You guide each step | Agent decides the steps |
+| Forgiving of vague instructions | Vague = wrong result |
+| Good for creative exploration | Good for well-defined deliverables |
+
+### Superagent prompt structure
+
+```
+[TASK TYPE] — state what you want built in one sentence.
+
+**Tech stack:** [React + Vite + TypeScript + Tailwind / Python + FastAPI / etc.]
+No external UI libraries. Everything in a single file [App.tsx / main.py / etc.].
+
+**SETUP**
+[Fonts, global CSS, page title, base configuration]
+
+**STRUCTURE**
+[Sections / pages / screens — list each with its content and purpose]
+
+**COMPONENTS**
+[Key UI elements: navbar, hero, cards, forms — describe behavior and layout]
+
+**DATA**
+[Constants, sample data, any hardcoded values the agent needs]
+
+**INTERACTIONS**
+[Animations, transitions, scroll behavior, responsive breakpoints]
+
+**DESIGN RULES**
+[Colors, typography, spacing, responsiveness, language]
+
+After completing, verify: [list 3–5 specific things to check before delivering]
+```
+
+### Example: single-prompt landing page
+```
+Create a landing page for a dental clinic using React + Vite + TypeScript +
+Tailwind CSS. No external UI libraries. Everything in a single App.tsx file.
+3 full-screen sections, fixed navbar, loading animation.
+
+SETUP
+Font: "Open Sauce One" via <head> links.
+Title: "Dental Care — Quality Care"
+Global CSS: @tailwind base/components/utilities, height 100%, font-family Open Sauce One.
+
+STRUCTURE
+Section 1 HERO: headline "Specialists in professional smiles", subtitle "Free consultation",
+CTA button "Book Now".
+Section 2 GALLERY: 3-column grid with smile transformation photos.
+Section 3 SERVICES: Veneers / Whitening / Implants with icons and descriptions.
+
+COMPONENTS
+Navbar: fixed top, logo left, menu right, hamburger mobile, blur backdrop.
+AnimReveal: fade-in + translateY on scroll, 0.6s cubic-bezier, staggered delay.
+MaskedCard: shared background image across sections for cohesive visual effect.
+
+DESIGN RULES
+Responsive to 768px. Portuguese language. Border-radius 1rem on cards.
+Typography: clamp(3rem, 11vw, 11rem) for hero headline.
+
+Verify: (1) all 3 sections render, (2) navbar scrolls correctly, (3) mobile
+hamburger works, (4) animations trigger on scroll, (5) all text in Portuguese.
+```
+
+### When to use a superagent vs sequential prompts
+- **Superagent**: well-defined deliverable, technical spec is clear, output is a single artifact
+- **Sequential (Lovable)**: creative exploration, iterative design, visual feedback needed at each step
+
+---
+
 ## No-code app builder prompts (Lovable / Bolt / v0)
 
 Use when the user wants to build a mobile or web app in a vibe-coding tool.
