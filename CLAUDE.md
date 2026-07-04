@@ -23,40 +23,24 @@ A `description` é o algoritmo de routing — determina quando a skill dispara. 
 
 ## Instalação completa (novo ambiente)
 
-Dois scripts separados por intenção:
-- **`install-skills.ps1`** (Windows) — instala as 46 skills personalizadas deste repo
-- **`install-external-packages.sh`** (Linux/Mac) — instala pacotes externos de terceiros (gstack, stop-slop, last30days, taste-skill, hyperframes)
+Script único para todas as 137 skills:
+- **`install-skills.ps1`** (Windows) — instala todas as 137 skills deste repo numa máquina nova
 
 ### Windows (novo ambiente)
 ```powershell
-# 1. Clonar o repositório (branch main — default)
+# Opção A: clonar o repo e correr o script
 git clone https://github.com/Nankov-ai/anthropics-skills.git
-
-# 2. Instalar as 46 skills personalizadas
 powershell -ExecutionPolicy Bypass -File anthropics-skills\install-skills.ps1
 
-# 3. Opcional: instalar pacotes externos (requer WSL ou Git Bash)
-bash anthropics-skills/install-external-packages.sh
+# Opção B: download direto do script (sem clonar)
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Nankov-ai/anthropics-skills/main/install-skills.ps1" -OutFile "install-skills.ps1"
+powershell -ExecutionPolicy Bypass -File install-skills.ps1
 
-# 4. Recarregar no Claude Code
+# Depois, recarregar no Claude Code:
 # /reload-skills
 ```
 
-### Linux/Mac (sessão remota ou novo ambiente)
-```bash
-# 1. Clonar o repositório
-git clone https://github.com/Nankov-ai/anthropics-skills.git ~/.claude/skills
-
-# 2. Instalar pacotes externos
-bash ~/.claude/skills/install-external-packages.sh
-
-# 3. Recarregar no Claude Code
-# /reload-skills
-```
-
-> **Nota:** O `install-skills.ps1` faz download direto dos SKILL.md do GitHub — sem conteúdo embutido, sem problemas de encoding. Branch default alterado para `main` em Jul 2026.
-
-O script `install-external-packages.sh` instala automaticamente todos os pacotes externos e o CLI graphifyy. Corre numa sessão remota do Claude Code ou em qualquer terminal com git + pip disponíveis.
+> **Nota:** O `install-skills.ps1` faz download direto dos SKILL.md do GitHub — sem conteúdo embutido, sem problemas de encoding. Branch default: `main`. Atualizado em Jul 2026 para cobrir todas as 137 skills.
 
 ## Sincronização
 
@@ -72,7 +56,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (46) + skills externas instaladas globalmente
+## Skills neste repositório (137)
 
 > **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
 > Para reverter: `git checkout pre-optimization-2026-06-30`
@@ -133,16 +117,17 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | web-artifacts-builder | Criada sessão Jun 2026 |
 | xlsx | Criada sessão Jun 2026 |
 
-### Skills externas instaladas globalmente (Jun 2026)
-Instaladas diretamente em `C:\Users\Utilizador\.claude\skills\` — não estão neste repositório.
+### Skills de terceiros incluídas no repositório (Jul 2026)
 
-| Pacote | Skills | Fonte |
-|--------|--------|-------|
-| **gstack** (garrytan/gstack) | 50+ skills: office-hours, plan-ceo-review, plan-eng-review, plan-design-review, autoplan, review, ship, land-and-deploy, qa, qa-only, browse, scrape, cso, design-consultation, design-shotgun, design-html, design-review, investigate, health, document-generate, document-release, make-pdf, retro, spec, codex, freeze, guard, careful, learn, context-save, context-restore, benchmark, canary, devex-review, diagram, skillify, pair-agent, ios-fix, ios-qa, ios-design-review, ios-sync, ios-clean, setup-deploy, setup-gbrain, setup-browser-cookies, sync-gbrain, gstack-upgrade | github.com/garrytan/gstack |
-| **stop-slop** (hardikpandya/stop-slop) | stop-slop | github.com/hardikpandya/stop-slop |
-| **last30days** (mvanhorn/last30days-skill) | last30days | github.com/mvanhorn/last30days-skill |
-| **taste-skill** (Leonxlnx/taste-skill) | taste-skill, taste-skill-v1, minimalist-skill, brutalist-skill, soft-skill, redesign-skill, image-to-code-skill, stitch-skill, brandkit, output-skill, imagegen-frontend-web, imagegen-frontend-mobile | github.com/Leonxlnx/taste-skill |
-| **hyperframes** (heygen-com/hyperframes) | hyperframes, hyperframes-core, hyperframes-animation, hyperframes-creative, hyperframes-media, hyperframes-cli, hyperframes-registry, general-video, product-launch-video, website-to-video, pr-to-video, faceless-explainer, motion-graphics, music-to-video, slideshow, embedded-captions, graphic-overlays, media-use, remotion-to-hyperframes | github.com/heygen-com/hyperframes |
+Todas as skills de terceiros foram integradas no repo `Nankov-ai/anthropics-skills` (são open source públicas). O `install-skills.ps1` instala tudo de um só lugar.
+
+| Origem | Skills incluídas |
+|--------|-----------------|
+| **gstack** (garrytan/gstack) | _gstack-command, autoplan, benchmark, benchmark-models, browse, canary, careful, codex, context-restore, context-save, cso, design-consultation, design-html, design-review, design-shotgun, devex-review, diagram, document-generate, document-release, freeze, gstack, gstack-upgrade, guard, health, investigate, land-and-deploy, landing-report, learn, loop, make-pdf, office-hours, open-gstack-browser, pair-agent, plan-ceo-review, plan-design-review, plan-devex-review, plan-eng-review, plan-tune, pr-to-video\*, prompt-builder, qa, qa-only, retro, scrape, setup-browser-cookies, setup-deploy, setup-gbrain, ship, skillify, spec, sync-gbrain, unfreeze |
+| **stop-slop** (hardikpandya/stop-slop) | stop-slop |
+| **last30days** (mvanhorn/last30days-skill) | last30days |
+| **taste-skill** (Leonxlnx/taste-skill) | taste-skill, taste-skill-v1, minimalist-skill, brutalist-skill, soft-skill, redesign-skill, image-to-code-skill, stitch-skill, brandkit, output-skill, imagegen-frontend-web, imagegen-frontend-mobile |
+| **hyperframes** (heygen-com/hyperframes) | hyperframes, hyperframes-core, hyperframes-animation, hyperframes-creative, hyperframes-media, hyperframes-cli, hyperframes-registry, general-video, product-launch-video, website-to-video, pr-to-video, faceless-explainer, motion-graphics, music-to-video, slideshow, embedded-captions, graphic-overlays, media-use, remotion-to-hyperframes |
 
 ## Histórico da sessão de criação (Jun 2026)
 
@@ -192,11 +177,12 @@ Sessão de 02/06/2026 do ISCTE Executive Education (pós-graduação IA para Ges
 Conteúdo extraído sem nomes de clientes ou informação confidencial.
 Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → intent data → sequenciadores multicanal. Inclui o padrão "operating system" para agentes (regras lidas antes de cada ação) e a regra de human-in-the-loop antes de qualquer envio.
 
-### Estado após sessão (Jul 2026 — sessão 3)
-- **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
-- **100 skills ativas** no ambiente remoto Claude Code
-- **46 skills** neste repositório (após otimização 30 Jun + adições Jul 2026)
-- 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
+### Estado após sessão (Jul 2026 — sessão 4)
+- **137 skills** neste repositório — fonte única de verdade
+- `install-skills.ps1` reescrito para cobrir todas as 137 skills
+- Skills de terceiros (gstack, hyperframes, taste-skill, stop-slop, last30days) integradas no repo
+- autoplan atualizado (gstack latest: 1853 linhas) e hyperframes atualizado (heygen latest: 166 linhas)
+- Grupo B (10 skills GitHub-only) instaladas localmente
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
 - VSCode tasks automáticas (graphify check on folder open) configuradas nos 5 projetos
