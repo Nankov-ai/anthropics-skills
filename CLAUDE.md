@@ -52,7 +52,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (43) + skills externas instaladas globalmente
+## Skills neste repositório (44) + skills externas instaladas globalmente
 
 > **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
 > Para reverter: `git checkout pre-optimization-2026-06-30`
@@ -60,11 +60,11 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 > `prompt-builder` (vazia); descriptions afinadas em `review`, `loop-engineering`,
 > `self-improving-loop` para eliminar routing conflicts.
 
-### Skills desenvolvidas neste repositório (43)
+### Skills desenvolvidas neste repositório (44)
 
 | Skill | Origem |
 |---|---|
-| agent-prompt-builder | Original |
+| agent-prompt-builder | Original; estendida com padrão Lovable/Bolt/v0 para no-code apps (Jul 2026) |
 | ai-agent-patterns | Criada de imagem "15 AI Agent Design Patterns" (Jun 2026) |
 | agent-reasoning | Original |
 | aiact | Original |
@@ -77,6 +77,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | claude-api | Criada sessão Jun 2026 |
 | code-review | Criada sessão Jun 2026 |
 | context-engineering | Criada de artigo e imagens sobre context engineering — contexto primeiro, prompt depois (Jun 2026) |
+| notebooklm | Criada de manuais de curso IA — workflow NotebookLM, supercérebros, podcast, extensão YouTube (Jul 2026) |
 | doc-coauthoring | Criada sessão Jun 2026 |
 | docx | Criada sessão Jun 2026 |
 | enterprise-ai-agent-designer | Criada de apresentação IT consulting (Jun 2026) |
