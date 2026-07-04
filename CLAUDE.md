@@ -173,7 +173,7 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 ### Estado após sessão (Jul 2026 — sessão 3)
 - **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
 - **100 skills ativas** no ambiente remoto Claude Code
-- **43 skills** neste repositório (após otimização de 30 Jun 2026)
+- **44 skills** neste repositório (após otimização 30 Jun + adições Jul 2026)
 - 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
@@ -187,6 +187,10 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - `loop-engineering` — /goal e /loop commands, charter template, LOOP-STATE.md
 - `self-improving-loop` — honest-grader subagent, self-journal.md, self-rules.md, /improve command; estendida com failure taxonomy, 4 prompt templates, signal taxonomy, build sequence
 - `context-engineering` — 5-layer model, context-first decision flow, cascade failure diagram, retrieval/memory/tool output guidelines
+- `notebooklm` — closed-context AI (sem alucinações), workflow 5 passos, padrão supercérebros, podcast/study guide/timeline/infographic, extensão YouTube to NotebookLM (Jul 2026)
+
+**Skills estendidas:**
+- `agent-prompt-builder` — adicionada secção no-code app builders (Lovable/Bolt/v0): hand-off package structure, template completo de prompt, quality check, anti-patterns (Jul 2026)
 
 **Otimização de routing (30 Jun 2026):**
 - Removida `loop` (absorvida em `loop-engineering`)
