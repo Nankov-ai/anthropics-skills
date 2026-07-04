@@ -23,18 +23,38 @@ A `description` é o algoritmo de routing — determina quando a skill dispara. 
 
 ## Instalação completa (novo ambiente)
 
-Para instalar todas as skills — as deste repositório + todas as skills externas — numa nova máquina ou sessão remota:
+Dois scripts separados por intenção:
+- **`install-skills.ps1`** (Windows) — instala as 46 skills personalizadas deste repo
+- **`install-external-packages.sh`** (Linux/Mac) — instala pacotes externos de terceiros (gstack, stop-slop, last30days, taste-skill, hyperframes)
 
+### Windows (novo ambiente)
+```powershell
+# 1. Clonar o repositório (branch main — default)
+git clone https://github.com/Nankov-ai/anthropics-skills.git
+
+# 2. Instalar as 46 skills personalizadas
+powershell -ExecutionPolicy Bypass -File anthropics-skills\install-skills.ps1
+
+# 3. Opcional: instalar pacotes externos (requer WSL ou Git Bash)
+bash anthropics-skills/install-external-packages.sh
+
+# 4. Recarregar no Claude Code
+# /reload-skills
+```
+
+### Linux/Mac (sessão remota ou novo ambiente)
 ```bash
-# 1. Clonar este repositório
+# 1. Clonar o repositório
 git clone https://github.com/Nankov-ai/anthropics-skills.git ~/.claude/skills
 
-# 2. Instalar as skills externas (gstack, stop-slop, last30days, taste-skill, hyperframes, graphifyy)
+# 2. Instalar pacotes externos
 bash ~/.claude/skills/install-external-packages.sh
 
 # 3. Recarregar no Claude Code
 # /reload-skills
 ```
+
+> **Nota:** O `install-skills.ps1` faz download direto dos SKILL.md do GitHub — sem conteúdo embutido, sem problemas de encoding. Branch default alterado para `main` em Jul 2026.
 
 O script `install-external-packages.sh` instala automaticamente todos os pacotes externos e o CLI graphifyy. Corre numa sessão remota do Claude Code ou em qualquer terminal com git + pip disponíveis.
 
