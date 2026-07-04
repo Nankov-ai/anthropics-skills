@@ -72,7 +72,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (45) + skills externas instaladas globalmente
+## Skills neste repositório (46) + skills externas instaladas globalmente
 
 > **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
 > Para reverter: `git checkout pre-optimization-2026-06-30`
@@ -80,12 +80,13 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 > `prompt-builder` (vazia); descriptions afinadas em `review`, `loop-engineering`,
 > `self-improving-loop` para eliminar routing conflicts.
 
-### Skills desenvolvidas neste repositório (45)
+### Skills desenvolvidas neste repositório (46)
 
 | Skill | Origem |
 |---|---|
 | agent-prompt-builder | Original; estendida com padrão Lovable/Bolt/v0 (Jul 2026) e padrão Manus/superagente (Jul 2026) |
 | ai-video-creator | Criada de manual de curso IA — Flow (anúncios cinematográficos) + Higgsfield (animação de fotos) (Jul 2026) |
+| visual-content-transformer | Criada de vídeo de curso IA — 12 estratégias para transformar conteúdo existente em visual profissional, com prompts exatos para cada estratégia (Jul 2026) |
 | ai-agent-patterns | Criada de imagem "15 AI Agent Design Patterns" (Jun 2026) |
 | agent-reasoning | Original |
 | aiact | Original |
@@ -194,7 +195,7 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 ### Estado após sessão (Jul 2026 — sessão 3)
 - **127+ skills ativas** em `C:\Users\Utilizador\.claude\skills\` (Windows local)
 - **100 skills ativas** no ambiente remoto Claude Code
-- **45 skills** neste repositório (após otimização 30 Jun + adições Jul 2026)
+- **46 skills** neste repositório (após otimização 30 Jun + adições Jul 2026)
 - 5 pacotes externos instalados globalmente (gstack, stop-slop, last30days, taste-skill, hyperframes)
 - `graphifyy` instalado como CLI + CLAUDE.md configurado em 5 projetos (norauto-visionai+, Visionai+, OutOfBox, hiperfrio-o2c-rag, treino-e-diagnóstico-ocular)
 - `/last30days` queries de mercado adicionadas ao CLAUDE.md dos mesmos 5 projetos
@@ -210,6 +211,7 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - `context-engineering` — 5-layer model, context-first decision flow, cascade failure diagram, retrieval/memory/tool output guidelines
 - `notebooklm` — closed-context AI (sem alucinações), workflow 5 passos, padrão supercérebros, podcast/study guide/timeline/infographic, extensão YouTube to NotebookLM (Jul 2026)
 - `ai-video-creator` — Flow (anúncios cinematográficos: imagens + storyboard → vídeo 15-30s) + Higgsfield (animação de fotografias estáticas); workflow combinado, templates, exemplos (Jul 2026)
+- `visual-content-transformer` — 12 estratégias para transformar qualquer conteúdo (texto, dados, foto, esboço, documento) em visual profissional; prompts exatos para cada estratégia (Jul 2026)
 
 **Skills estendidas:**
 - `agent-prompt-builder` — adicionada secção no-code app builders (Lovable/Bolt/v0) (Jul 2026); adicionado padrão superagente/Manus: prompt único detalhado para agentes autónomos (Jul 2026)
