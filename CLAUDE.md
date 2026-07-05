@@ -56,7 +56,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
-## Skills neste repositório (137)
+## Skills neste repositório (139)
 
 > **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
 > Para reverter: `git checkout pre-optimization-2026-06-30`
@@ -68,6 +68,8 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 
 | Skill | Origem |
 |---|---|
+| linkedin-profile-builder | Criada de 2 perfis de referência analisados — headline, About, dual-identity (corporate + founder), conteúdo (Jul 2026) |
+| vibecoding | Criada de curso Vibecoding (Udemy) — 8 tipos de prompt para construir software com IA, CoT, biblioteca de prompts (Jul 2026) |
 | agent-prompt-builder | Original; estendida com padrão Lovable/Bolt/v0 (Jul 2026) e padrão Manus/superagente (Jul 2026) |
 | ai-video-creator | Criada de manual de curso IA — Flow (anúncios cinematográficos) + Higgsfield (animação de fotos) (Jul 2026) |
 | visual-content-transformer | Criada de vídeo de curso IA — 12 estratégias para transformar conteúdo existente em visual profissional, com prompts exatos para cada estratégia (Jul 2026) |
@@ -211,6 +213,15 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - Criado em `~/.claude/commands/analyze.md` e em `commands/analyze.md` no repo
 - Lê o projeto, mapeia skills relevantes, aplica-as com análise real
 - Nota: funciona no Claude Code CLI; no Antigravity IDE usar linguagem natural ("analisa este projeto")
+
+### Sessão 5 — o que foi feito (Jul 2026)
+
+**Skills criadas:**
+- `linkedin-profile-builder` — headline (3 fórmulas PT/EN/híbrido), About/Summary com padrão dual-identity (corporate + founder), reescrita de experiência, featured section, estratégia de conteúdo, checklist de auditoria; baseada em 2 perfis de referência analisados (Jul 2026)
+- `vibecoding` — guia completo de prompts para construir software com IA; 3 fundações (CoT, delimitadores, especificidade), 8 tipos de prompt especializados (arquitetura, componente, estilização, segurança, refatoração, debug, app completa/superagent, documentos), gestão de biblioteca de prompts; baseada em curso Vibecoding (Udemy, Jul 2026)
+
+**Projetos criados:**
+- `C:\projetos\Linkedin\` — projeto LinkedIn com CLAUDE.md completo (contexto Nodeflow + Norauto + audiências + estratégia de conteúdo), headline-options.md (6 variantes), about-draft.md (v1.0 PT, v2.0 PT baixo-risco, v2.0 EN)
 
 ### Sessão 4 — o que foi feito (Jul 2026)
 
