@@ -214,6 +214,42 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - Lê o projeto, mapeia skills relevantes, aplica-as com análise real
 - Nota: funciona no Claude Code CLI; no Antigravity IDE usar linguagem natural ("analisa este projeto")
 
+### Sessão 7 — o que foi feito (Jul 2026)
+
+**Skills de educação — criadas e expandidas:**
+- `ai-na-formacao` — expandida com 6 ferramentas especializadas para aprendizagem:
+  - Gliglish (prática oral de idiomas), Mizou (chatbots de estudo por disciplina), Turboscribe (transcrição áudio/vídeo), Diffit (adaptação de conteúdos por nível cognitivo), Magic School (automação de preparação docente), Gamma (criação de apresentações com IA)
+  - Conteúdo extraído de apresentação "IA Generativa na Aprendizagem" (confidencial — sem nomes gravados)
+- `visual-ia-educacao` — criada de webinar "Criar e Editar Recursos Visuais com IA" (PPTX + imagens de 21 Mai 2026): 8 Regras de Ouro do Prompt Visual, 15 Possibilidades de Edição, guia de ferramentas (ChatGPT Images 2.0, Firefly, Gemini, Canva AI), workflow 5 passos, checklist antes de publicar
+- `ai-na-formacao` — originalmente criada de 3 fontes: webinar UAb + "Think Outside The Bot" + análise de contexto educativo PT/UK. Cobre: 4 Princípios Co-inteligência (Ethan Mollick), Framework ético, 4 Tipos de tarefas docentes, Modelo SAMR, AILit Framework, 12 Dimensões IA na Educação, RGPD, design de avaliação resistente a IA
+
+**Sistema de auto-melhoria de skills — criado:**
+- `~/.claude/CLAUDE.md` — CLAUDE.md global (novo ficheiro); instrui o Claude a registar falhas de skills silenciosamente em qualquer conversa e a processar melhorias automaticamente no início de cada sessão
+- `~/.claude/skill-feedback.md` — log de falhas; entradas adicionadas pelo Claude quando o utilizador descreve uma falha em chat, sem precisar de comando
+- Ciclo: falha descrita em chat → registo automático → início de sessão seguinte (7+ dias) → Claude melhora o SKILL.md e informa numa linha
+- Inspirado no conceito Software 3.0 de Karpathy — o prompt é software e pode ser otimizado por outro LLM
+
+**MCP notebooklm — fix recorrente + painel Gemini (continuação Sessão 6):**
+- Skills criadas num contexto de fix do erro MCP notebooklm no Antigravity IDE — ver Sessão 6 para detalhes técnicos
+
+### Sessão 6 — o que foi feito (Jul 2026)
+
+**MCP notebooklm — fix recorrente + prevenção:**
+- Diagnóstico: `notebooklm-mcp.exe` precisa de subcomando `server` para entrar em modo MCP; sem ele imprime help e faz EOF imediato
+- Fix aplicado: `settings.json` — `"args": ["server"]` em vez de `[]`
+- Versão pinada: `pip install "notebooklm-mcp==2.0.11"` — confirmado já instalado
+- Script de diagnóstico criado: `C:\projetos\mcp-check.ps1` — verifica e repara automaticamente path + args; usar quando o erro reaparecer antes de investigar manualmente
+
+**MCP notebooklm no painel Gemini (Antigravity IDE):**
+- O painel Skills do lado direito do Antigravity usa configuração MCP separada: `C:\Users\Utilizador\.gemini\antigravity\mcp_config.json`
+- Ficheiro estava vazio; adicionado `notebooklm-mcp` com `args: ["server"]` para dar acesso aos projetos NotebookLM a partir do painel Gemini
+- Erro `MCP Error` persistente no painel é um bug da extensão `googlecloudtools.datacloud-0.5.2` (EINVAL ao tentar fazer `unlink` de named pipes Windows no arranque) — não afeta Claude Code nem notebooklm; aguardar update da extensão Google Cloud Tools
+
+**Projeto LinkedIn continuado:**
+- About/Summary PT e EN atualizados para v2.4: removidos contrastes implícitos com terceiros, abertura afirmativa (padrão Bruno Oliveira/Rogério Canhoto), CTA sem sobreposição com função Norauto
+- Headline definitiva aplicada no LinkedIn (Jul 2026, EN): `Generative AI for Business | Certified Trainer (CCP · E-Learning) | Digital Marketing | International Category Manager | Nodeflow: "Less Friction. More Impact."`
+- CLAUDE.md do projeto LinkedIn atualizado com regra: nunca definir por negação ou contraste — afirmar o que se faz
+
 ### Sessão 5 — o que foi feito (Jul 2026)
 
 **Skills criadas:**
