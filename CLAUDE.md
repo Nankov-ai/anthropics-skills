@@ -223,6 +223,14 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - `visual-ia-educacao` — criada de webinar "Criar e Editar Recursos Visuais com IA" (PPTX + imagens de 21 Mai 2026): 8 Regras de Ouro do Prompt Visual, 15 Possibilidades de Edição, guia de ferramentas (ChatGPT Images 2.0, Firefly, Gemini, Canva AI), workflow 5 passos, checklist antes de publicar
 - `ai-na-formacao` — originalmente criada de 3 fontes: webinar UAb + "Think Outside The Bot" + análise de contexto educativo PT/UK. Cobre: 4 Princípios Co-inteligência (Ethan Mollick), Framework ético, 4 Tipos de tarefas docentes, Modelo SAMR, AILit Framework, 12 Dimensões IA na Educação, RGPD, design de avaliação resistente a IA
 
+**GEM criado — Classificador Google AI:**
+- Ficheiro: `Apresentações/GEM-Classificador-Google-AI.md`
+- Baseado em prints de sessão de formação (Formação.png, Formação1.png, Prompt.png)
+- Classifica use cases em 8 ferramentas Google AI (Gemini Application, Gemini for Workspace, NotebookLM, AI Studio, Workspace Studio, Imagen, Veo, Google Vids)
+- Aceita qualquer formato de input (PDF, Sheet, CSV, imagem, áudio, vídeo, etc.)
+- Trilingue: PT, EN, FR
+- Output: página HTML com post-its arrastáveis, fundo escuro, adequado para projeção
+
 **Sistema de auto-melhoria de skills — criado:**
 - `~/.claude/CLAUDE.md` — CLAUDE.md global (novo ficheiro); instrui o Claude a registar falhas de skills silenciosamente em qualquer conversa e a processar melhorias automaticamente no início de cada sessão
 - `~/.claude/skill-feedback.md` — log de falhas; entradas adicionadas pelo Claude quando o utilizador descreve uma falha em chat, sem precisar de comando
