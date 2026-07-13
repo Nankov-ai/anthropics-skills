@@ -80,6 +80,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 | nando-global | Original |
 | algorithmic-art | Criada sessão Jun 2026 |
 | b2b-outbound-automation | Criada de transcrição masterclass Growth Inventions |
+| co-intelligence | Criada de *Co-Intelligence* (Ethan Mollick) — 4 modos de colaboração humano-IA, sugestão proativa de Centauro/Ciborgue (Jun 2026) |
 | brand-guidelines | Criada sessão Jun 2026 |
 | canvas-design | Criada sessão Jun 2026 |
 | claude-api | Criada sessão Jun 2026 |
@@ -173,6 +174,12 @@ Inclui guia de seleção por cenário e padrões combinados.
 Duas skills criadas a partir de uma apresentação de uma empresa de IT consulting (conteúdo confidencial — sem nomes de pessoas ou empresas gravados).
 - `enterprise-ai-agent-designer`: desenha soluções completas de agentes IA por indústria (jurídico, farmacêutico, banca, retalho). Padrões de arquitetura com Azure OpenAI, LangChain, WSO2, etc.
 - `it-consulting-proposal`: gera propostas e pitches de consultoria IT estruturados. Cobre 7 práticas de serviço, 4 modelos de colaboração, e parcerias (Microsoft Gold, Atlassian Gold, WSO2 VAR, Google).
+
+**5. co-intelligence — extraída de Co-Intelligence (Ethan Mollick)**
+Framework dos 4 modos de colaboração humano-IA: Solo, Delegado, Centauro, Ciborgue.
+A skill sugere proativamente Centauro ou Ciborgue sempre que o utilizador está prestes a delegar
+em modo puro — garantindo que a escolha é consciente. Inclui tabela de aplicação específica
+à criação de skills e guião de como apresentar a sugestão ao utilizador.
 
 **4. b2b-outbound-automation — extraída de transcrição de masterclass**
 Sessão de 02/06/2026 do ISCTE Executive Education (pós-graduação IA para Gestão).
