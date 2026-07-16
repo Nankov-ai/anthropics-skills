@@ -230,6 +230,11 @@ Framework dos 4 blocos: infraestrutura de email → TAM + lead scoring → inten
 - `visual-ia-educacao` — criada de webinar "Criar e Editar Recursos Visuais com IA" (PPTX + imagens de 21 Mai 2026): 8 Regras de Ouro do Prompt Visual, 15 Possibilidades de Edição, guia de ferramentas (ChatGPT Images 2.0, Firefly, Gemini, Canva AI), workflow 5 passos, checklist antes de publicar
 - `ai-na-formacao` — originalmente criada de 3 fontes: webinar UAb + "Think Outside The Bot" + análise de contexto educativo PT/UK. Cobre: 4 Princípios Co-inteligência (Ethan Mollick), Framework ético, 4 Tipos de tarefas docentes, Modelo SAMR, AILit Framework, 12 Dimensões IA na Educação, RGPD, design de avaliação resistente a IA
 
+**Skill criada — `ai-adoption-strategy`:**
+- Criada de 2 transcrições de webinar (14 Jul 2026) + 2 fotos de slides (confidencial — sem nomes gravados)
+- Cobre: API vs subscrição (custo real), "estender a passadeira" via MCP connectors, shadow IT inteligente, sandbox tecnológico empresarial, LLMs como nova camada de abstração, canais B2B em Portugal (LinkedIn €4/lead, YouTube €200/100k impressões)
+- Slide confirmado: mesmos 500M tokens = $8.000 API vs $200 subscrição
+
 **Skill criada — `browser-agents`:**
 - Criada de artigo "How Browser Agents Automate Online Workflows" (prints Jul 2026)
 - Cobre: definição, loop 5 passos, 6 casos de uso reais, comparação de 5 ferramentas (Browserbase, MultiOn, Adept, OpenAI Operator, Anthropic Computer Use), benefícios, limitações, guia de arranque
