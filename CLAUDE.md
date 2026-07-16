@@ -56,6 +56,22 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 8 — o que foi feito (Jul 2026)
+
+**`aiact` — atualização major (16 Jul 2026):**
+- Baseada na apresentação ISCTE Módulo 7 sobre AI Act
+- Adicionada categoria GPAI e obrigações (limiar de risco sistémico >10²⁵ FLOPs)
+- Timeline de aplicação (Fev 2025 → Mai 2025 → Ago 2026 → Ago 2027)
+- Tabela Provider vs Deployer expandida com orientação específica Nodeflow
+- 8 obrigações para IA de Alto Risco (logging, base de dados UE, marcação CE)
+- Tabela de interação AI Act ↔ RGPD (DPIA vs FRIA, Art. 22 vs supervisão humana)
+- Framework de governança de IA (AI Officer, literacia, registo de incidentes)
+- Terceiro nível de coima (7,5M€/1% por informação falsa às autoridades)
+- Checklist dividida em Risco Limitado vs Alto Risco
+- Art. 50 (transparência) expandido com estado por app Nodeflow
+- SKILL.md passou de 32 para ~175 linhas
+- Confirmado em sync entre repo e `C:\Users\Utilizador\.claude\skills\aiact\`
+
 ## Skills neste repositório (139)
 
 > **Ponto de restauro:** tag `pre-optimization-2026-06-30` no GitHub.
