@@ -56,6 +56,19 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 13 — o que foi feito (Jul 2026)
+
+**`agent-prompt-builder` — novo "Prompt Audit Mode":**
+- Skill estendida para cobrir avaliação/melhoria de prompts já existentes, não só criação do zero — pedido do utilizador: tem um GEM "Prompt-Creator" que recebe prompts de terceiros para avaliar, mas o GEM só sabia criar
+- Checklist de 16 pontos (13 gerais + 3 específicos para prompts de sistema: scope lock, fallback, ordem de prioridade), extraído e expandido de `Engenharia-de-Prompts-Book.pdf` (`G:\O meu disco\Formação\Prompts\`)
+- Novo `references/frameworks.md` — catálogo de frameworks de prompt (RTF, CO-STAR, RACE, CREATE, PACEF, PASECT, RISE, RISEN, TAG, SPAR) com guia de escolha, extraído da mesma fonte
+- Descrição da skill atualizada para disparar em "avaliar/rever/criticar prompt" e "criar um prompt engineer/evaluator"
+
+**`GEM-Prompt-Engineer/Prompt-Engineer-Gem.md` — novo:**
+- Versão melhorada do GEM "Prompt-Creator GPT" do utilizador, produzida aplicando o próprio Prompt Audit Mode acima ao prompt original
+- Passa a ter dois modos (deteção automática): Criação (mantém o template original) e Auditoria (novo, com o checklist de 16 pontos)
+- Adicionado scope lock + fallback (o GEM original não recusava pedidos fora de âmbito)
+
 ### Sessão 12 — o que foi feito (Jul 2026)
 
 **Reorganização em pastas dedicadas por projeto GEM:**

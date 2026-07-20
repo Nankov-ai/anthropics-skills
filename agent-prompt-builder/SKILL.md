@@ -6,9 +6,11 @@ description: >
   Mistral Le Chat agents, or any LLM-based assistant. Also covers no-code app builder
   prompts for Lovable, Bolt, v0, and similar vibe-coding tools. Triggers when the user
   wants to build a GPT, create a Gem, write a system prompt, design an AI assistant,
-  create an agent, improve, audit, translate, or convert an existing system prompt between
-  platforms — or when they want to build an app in Lovable/Bolt/v0 and need a structured
-  prompt with design hand-off, screen specs, tech stack, and functional requirements.
+  create an agent, improve, audit, evaluate, review, critique, translate, or convert an
+  existing system prompt between platforms — including building a "prompt engineer" or
+  "prompt evaluator" persona whose job is to review and improve prompts submitted by others
+  — or when they want to build an app in Lovable/Bolt/v0 and need a structured prompt with
+  design hand-off, screen specs, tech stack, and functional requirements.
 ---
 
 # Agent Prompt Builder
@@ -52,7 +54,65 @@ description: >
 - Missing scope limits: always add a do-not rule
 - No output format: always specify language and structure
 
-See references/platforms.md and references/nodeflow-agent-patterns.md
+See references/platforms.md, references/nodeflow-agent-patterns.md and references/frameworks.md
+
+---
+
+## Prompt Audit Mode — evaluating and improving an existing prompt
+
+Use this mode when the user pastes a prompt someone else wrote (or their own) and
+wants it **evaluated and improved**, rather than built from scratch. Signals: "avalia
+este prompt", "melhora este prompt", "isto é suficiente?", pasting a full system
+prompt or GEM instruction block, or a request to build a "prompt evaluator /
+reviewer" role.
+
+### The audit checklist
+
+Walk the prompt against every point below. Don't just mark pass/fail — for each
+point that fails, name *specifically* what's missing, not just that something is.
+
+1. **Clear instructions** — is the task stated unambiguously, with no room for the model to guess intent?
+2. **Specific detail** — does it give concrete detail about the task, or does it stay generic?
+3. **Relevant context** — background, audience, or situational info the model needs?
+4. **Organized structure** — sections, delimiters, headers, or is it a wall of text?
+5. **Plain, unambiguous language** — free of vague qualifiers ("bom", "adequado", "quando necessário" without defining when)?
+6. **Examples or expected-output models** — are there few-shot examples where they'd remove ambiguity?
+7. **Free of grammar/spelling errors**?
+8. **Role clearly defined** — does the prompt state what persona/expertise the model should adopt?
+9. **Explicit end goal** — is success defined, or only the activity?
+10. **Success criteria / constraints** — word limits, tone, forbidden content, required citations?
+11. **Output format specified** — table, markdown, JSON, sections — exact shape, not just "a good answer"?
+12. **Minimizes ambiguous interpretation** — could two different people reading this prompt build meaningfully different outputs?
+13. **Model-portable** — does it rely on quirks of one specific model/platform, or does it hold up across ChatGPT/Claude/Gemini?
+
+For system prompts specifically (GEMs, Custom GPTs, agent instructions — not one-off
+task prompts), also check:
+
+14. **Scope lock** — does it say what the agent *refuses* to do, or can any user steer it anywhere?
+15. **Fallback behavior** — is there a defined response for out-of-scope, ambiguous, or unsafe requests, or is that left to the model's judgment?
+16. **Priority order** — when instructions conflict (a user request vs. a safeguard), does the prompt say which wins?
+
+### Output format for an audit
+
+```
+### Análise Positiva
+[What's already working — be specific, cite the actual line/section.]
+
+### Pontos de Melhoria
+[Each gap mapped to a checklist number. One line per gap, concrete, not generic.]
+
+### Versão Melhorada
+[The rewritten prompt, in a code block, ready to paste back into the platform.]
+```
+
+Pick the rewrite's structure using `references/frameworks.md` — match the framework
+to what the prompt is actually for (see "Choosing a framework" there) rather than
+defaulting to this skill's own Role-Mission-Context-Behavior-Output shape every time.
+
+### Anti-patterns for audits
+- Giving a pass/fail without saying what to change.
+- Rewriting the whole prompt when only 2-3 points actually need fixing — a surgical patch is more useful than a full rewrite when most of it already works.
+- Applying safeguards/checklist items from a *different* prompt's domain (e.g. don't graft image-generation consent rules onto a text-classification prompt) — audit what the prompt in front of you is actually for.
 
 ---
 
