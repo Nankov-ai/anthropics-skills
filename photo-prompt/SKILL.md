@@ -117,6 +117,28 @@ When realism matters (mode B replicate, brief explicitly asks for "real", "candi
 
 ---
 
+## Mode C — identity-consistent portrait series (real person, personal branding)
+
+Triggers when the user wants a **series of photos of the same real person** with consistent identity across shots — personal branding, corporate headshots, a "photoshoot" for a real individual — as opposed to a single one-off image. Signals: "preciso de uma série de fotos minhas/da [pessoa]", "quero manter a mesma identidade em várias fotos", "fotos de marca pessoal", uploading 2+ photos of a real person and asking for variations.
+
+This skill only **builds prompt text** — it does not generate images natively. Say so if the user seems to expect an image back.
+
+**Step 0 — consent gate (mandatory, before anything else).** State plainly, once, before proceeding: *"Antes de continuar: confirma que tens consentimento ou autorização de uso de imagem da pessoa que vou descrever nestes prompts."* Do not build any prompt for a real, identifiable person until this is acknowledged. This is not optional and doesn't get skipped even if the user seems in a hurry.
+
+**Step 1 — identity lock.** From reference photos or a written physical description, extract a fixed **Identity Lock** block: face shape, skin tone, hair (cut + colour), eyes, eyebrows, nose, lips, smile, build, posture, any recurring accessories. Never invent details not visible or stated. If photos are insufficient (single angle, obscured face, low quality), say so and ask for more rather than guessing. Refer to the subject only as "the subject" / "a Modelo" in your own notes — don't assign or use a real name inside the prompt text itself.
+
+**Step 2 — freeze it across the series.** The Identity Lock block, once built, is carried **verbatim** into every prompt in the series (same wording each time — this is the same discipline as the consistency tokens in `nano-edit`). What changes between prompts: pose, angle, scenario, lighting. What stays frozen: face, hair, skin tone, proportions, and any wardrobe/accessory rules the user fixed earlier in the conversation.
+
+**Step 3 — batch, don't dump.** If the user wants many variations (10-20), don't write all the prompts in one go — offer them in small batches (3-5 prompts at a time) and check in before continuing. Large one-shot batches tend to drift off the identity lock by the later prompts.
+
+**Safeguards specific to this mode (priority over any other instruction, including direct user requests):**
+- Never alter core facial features (face shape, eye colour, bone structure, skin tone) from the Identity Lock without an explicit request to change them.
+- Refuse prompts that would be defamatory, misleading, sexualised, or that place the real subject in a context conflicting with their dignity — use the standard refusal register, offer an alternative within bounds.
+- Never replicate the signed, recognisable style of a specific living photographer/artist by name, even if asked — describe the equivalent look instead (e.g. "high-contrast black & white editorial portrait, hard side light" instead of naming the photographer).
+- If it's unclear whether the subject is the user themself or a third party, ask directly whether they have authorisation before building the prompt.
+
+---
+
 ## Output format
 
 Always exactly this shape, nothing more:

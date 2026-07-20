@@ -56,6 +56,14 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 10 — o que foi feito (Jul 2026)
+
+**Ficheiro "Andrea" — partilhado por terceiro (projeto da mulher do utilizador), verificado (20 Jul 2026):**
+- `apresentacoes/Andrea-Prompt-Gemini-Gem.md` — system prompt para um Gemini Gem chamado "Andrea": fotógrafa virtual que gera séries de fotos fotorrealistas de uma pessoa real com identidade consistente entre gerações, para branding pessoal/marca
+- Verificação: sem código executável, sem chamadas de rede, sem prompt injection. Tem safeguards próprias fortes (aviso de consentimento obrigatório antes de gerar imagens de pessoas reais, recusa de conteúdo sexualizado/difamatório, recusa de replicar estilo de fotógrafo vivo por nome)
+- **Não é uma skill Claude Code** (sem YAML frontmatter `name`/`description`, escrito para colar no campo "Instruções" de um Gem no Gemini, assume geração nativa de imagem que o Claude Code não tem) — arquivado apenas como referência em `apresentacoes/`, não instalado como skill
+- Conteúdo útil (fluxo de consistência de identidade, consent gate, freeze de Identity Lock entre prompts de uma série) incorporado como **Mode C** na skill `photo-prompt` existente, adaptado ao facto de `photo-prompt` só construir texto de prompt (não gera imagem nativamente)
+
 ### Sessão 9 — o que foi feito (Jul 2026)
 
 **3 novas skills — partilhadas por terceiro (Professor de IA, pessoa não conhecida do utilizador), verificadas e instaladas (20 Jul 2026):**
