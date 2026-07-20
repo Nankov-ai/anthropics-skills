@@ -56,6 +56,15 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 9 — o que foi feito (Jul 2026)
+
+**3 novas skills — partilhadas por terceiro (Professor de IA, pessoa não conhecida do utilizador), verificadas e instaladas (20 Jul 2026):**
+- `illustration-prompt` — constrói prompts avançados para geração de ilustrações AI (Midjourney, Nano Banana, GPT Image, Flux); framework de 17 componentes, presets de estilo, camadas de imperfeição
+- `nano-edit` — constrói prompts para edição/composição de imagens AI (isolar objeto, montar cena com múltiplos assets, mudar ângulo de câmara); sistema de 6 blocos e tokens de consistência para séries
+- `photo-prompt` — constrói prompts avançados para geração de fotos AI-realistas; framework de componentes, presets, 5 camadas de realismo, troubleshooting de iteração
+- Verificação de segurança antes de instalar: sem código executável, sem chamadas de rede, sem exfiltração de dados, sem prompt injection, sem caracteres Unicode escondidos — apenas texto/Markdown puro. Guardrails próprias incluídas (recusa de conteúdo com menores). Tecnicamente seguras; proveniência da pessoa não verificada.
+- Instaladas em `C:\Users\Utilizador\.claude\skills\` e movidas para a estrutura padrão do repo (sem sufixo `.skill`)
+
 ### Sessão 8 — o que foi feito (Jul 2026)
 
 **`aiact` — atualização major (16 Jul 2026):**
