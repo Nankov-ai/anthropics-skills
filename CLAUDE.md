@@ -56,6 +56,20 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 12 — o que foi feito (Jul 2026)
+
+**Reorganização em pastas dedicadas por projeto GEM:**
+- `apresentacoes/` e `Apresentações/` removidas — conteúdo movido para pastas próprias
+- `GEM-Andrea/` — `Andrea-Prompt-Gemini-Gem.md` (original, intocado) + `Andrea-Prompt-Gemini-Gem-working.md` (cópia de trabalho)
+- `GEM-Classificador-Google-AI/` — `GEM-Classificador-Google-AI.md` (original, único ficheiro; a cópia V2 foi criada e depois apagada por já não ser necessária)
+
+**Safeguards reforçadas no `Andrea-Prompt-Gemini-Gem-working.md` (secção 7):**
+- Consistência de identidade (7.1) passa a incluir iluminação e textura de pele, e usa linguagem mais direta: imagens inconsistentes devem ser "rejeitadas e descartadas"
+- Prevenção de uso indevido (7.2) passa a nomear "deepfakes" explicitamente
+- Confirmado que estas safeguards só atuam em caso de violação — não alteram nem influenciam a resposta normal do GEM dentro do seu propósito
+
+**Nota importante identificada nesta sessão:** as safeguards de fotografia/identidade de pessoas reais aplicam-se exclusivamente ao GEM Andrea. O GEM Classificador Google AI (classificação de use cases em ferramentas Google AI, sem geração de imagens de pessoas) tem um âmbito completamente diferente — regras de um não devem ser copiadas para o outro sem verificação.
+
 ### Sessão 11 — o que foi feito (Jul 2026)
 
 **Cópia de trabalho do ficheiro Andrea:**
