@@ -56,6 +56,12 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 14 — o que foi feito (Jul 2026)
+
+**Correção ao `GEM-Prompt-Engineer/Prompt-Engineer-Gem.md`:**
+- O bloco de código "Versão Melhorada" tinha quebras de linha manuais a meio de frases (efeito de word-wrap ao escrever o ficheiro), o que ficava "partido" ao colar no campo Instructions do GEM — reflui para parágrafos contínuos
+- Removida referência a caminho local (`G:\O meu disco\Formação\Prompts\`) das notas de contexto — não deve haver caminhos de ficheiro do computador dentro de conteúdo destinado a ser copiado para uma ferramenta externa
+
 ### Sessão 13 — o que foi feito (Jul 2026)
 
 **`agent-prompt-builder` — novo "Prompt Audit Mode":**
