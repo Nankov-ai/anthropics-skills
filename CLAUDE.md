@@ -56,6 +56,12 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 11 — o que foi feito (Jul 2026)
+
+**Cópia de trabalho do ficheiro Andrea:**
+- `apresentacoes/Andrea-Prompt-Gemini-Gem.md` fica **intocado** — versão de referência original, congelada
+- `apresentacoes/Andrea-Prompt-Gemini-Gem-working.md` — cópia criada para qualquer edição futura; é este ficheiro que deve ser alterado, nunca o original
+
 ### Sessão 10 — o que foi feito (Jul 2026)
 
 **Ficheiro "Andrea" — partilhado por terceiro (projeto da mulher do utilizador), verificado (20 Jul 2026):**
