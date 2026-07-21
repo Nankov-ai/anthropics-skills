@@ -56,6 +56,15 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 15 — o que foi feito (Jul 2026)
+
+**`GEM-Assistente-Pessoal/Assistente-Pessoal.md` — novo:**
+- Pedido original do utilizador (print de prompt "acesso a tudo" para um Project ChatGPT/Codex) avaliado com o Prompt Audit Mode de `agent-prompt-builder`
+- Decisão: não criar skill nova — é um deliverable pontual, não uma capacidade repetível distinta; risco de conflito de routing com `agent-prompt-builder` (mesmo padrão do histórico de otimização de 30 Jun)
+- Duas versões produzidas: Claude (Custom Instructions de Project, com inventário real de conectores: Gmail, Calendar, Drive, Notion) e Gemini (Instructions de Gem, Workspace nativo)
+- Reforços face ao original: regra "ver não é agir", tratamento de dados sensíveis entre fontes, defesa explícita contra prompt injection vindo de conteúdo externo, fallback para fontes não ligadas (Slack/Granola/Twitter/Instagram/YouTube não existem como conector em nenhuma das duas plataformas), formato de resposta, ordem de prioridade
+- Nota explícita: acesso a fontes não se resolve por prompt, exige ligar conector real em cada plataforma; lista de fontes deve ser atualizada manualmente à medida que evolui
+
 ### Sessão 14 — o que foi feito (Jul 2026)
 
 **Correção ao `GEM-Prompt-Engineer/Prompt-Engineer-Gem.md`:**
