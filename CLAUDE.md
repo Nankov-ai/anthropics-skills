@@ -56,6 +56,14 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 16 — o que foi feito (Jul 2026)
+
+**`aiact` — correção factual (22 Jul 2026):**
+- Verificado artigo https://superhumano.academy/blog/ia-act-o-que-as-empresas-precisam-de-fazer — conteúdo não trouxe informação nova relevante, mas a verificação expôs 2 erros factuais já existentes na skill
+- **Corrigido**: Literacia em IA (Art. 4) estava datada de Mai 2025 na skill; data correta é **Fev 2025**, junto com as proibições (Art. 5) — mesma data de aplicação
+- **Corrigido**: obrigações GPAI estavam agrupadas com Alto Risco em Ago 2026; data correta é **Ago 2025** — um ano antes da maioria das obrigações de Alto Risco (Anexo III)
+- **Adicionado**: reconhecimento de emoções no local de trabalho e em instituições de ensino à lista de práticas proibidas (Art. 5.1.f) — confirmado pelo artigo, estava em falta na skill
+
 ### Sessão 15 — o que foi feito (Jul 2026)
 
 **`GEM-Assistente-Pessoal/Assistente-Pessoal.md` — novo:**

@@ -9,7 +9,7 @@ description: Referência completa sobre legislação europeia de IA. Usa esta sk
 
 | Nível | Exemplos | Obrigação principal |
 |---|---|---|
-| **Proibido** | Social scoring, manipulação subliminar, reconhecimento facial em espaço público, sistemas que exploram vulnerabilidades | Não implementar. Proibição efectiva desde **Fev 2025** |
+| **Proibido** | Social scoring, manipulação subliminar, reconhecimento facial em espaço público, sistemas que exploram vulnerabilidades, **reconhecimento de emoções no local de trabalho e em instituições de ensino** (Art. 5.1.f) | Não implementar. Proibição efectiva desde **Fev 2025** |
 | **Alto Risco** | Aprovação de crédito, triagem de CVs, sistemas educativos, biométria, infra-estruturas críticas, aplicação da lei | Auditoria, registo, human oversight, documentação técnica, conformidade CE |
 | **GPAI** (IA de Uso Geral) | GPT-4, Gemini, Claude, Llama — modelos de base | Transparência, registo, direitos de autor, avaliações de impacto sistémico (>10²⁵ FLOPs) |
 | **Risco Limitado** | Chatbots, geração de imagens/texto/voz, deepfakes | Transparência obrigatória — utilizador deve saber que interage com IA |
@@ -21,10 +21,12 @@ description: Referência completa sobre legislação europeia de IA. Usa esta sk
 
 | Data | O que entra em vigor |
 |---|---|
-| **Fev 2025** | Práticas proibidas (Art. 5) — proibições absolutas |
-| **Mai 2025** | Obrigações de Governance e Literacia em IA (Art. 4) |
-| **Ago 2026** | Sistemas de Alto Risco + GPAI (maioria das obrigações) |
-| **Ago 2027** | Sistemas de Alto Risco embutidos em produtos regulados existentes |
+| **Fev 2025** | Práticas proibidas (Art. 5) + Literacia em IA (Art. 4) — entram em vigor na mesma data |
+| **Ago 2025** | Obrigações GPAI (Cap. V), estruturas de governance/autoridades nacionais (Cap. VII), regime de sanções (Cap. XII) |
+| **Ago 2026** | Sistemas de Alto Risco (Anexo III) + restante maioria do Regulamento |
+| **Ago 2027** | Sistemas de Alto Risco embutidos em produtos regulados existentes (Anexo I) |
+
+**Correção (22 Jul 2026):** a versão anterior desta tabela tinha a Literacia em IA erradamente datada de Mai 2025 (correto: Fev 2025, junto com as proibições) e as obrigações GPAI erradamente agrupadas em Ago 2026 (correto: Ago 2025, um ano antes da maioria das obrigações de Alto Risco).
 
 ---
 
@@ -68,7 +70,7 @@ description: Referência completa sobre legislação europeia de IA. Usa esta sk
 | Reporte de incidentes graves à Comissão | ❌ | ✅ |
 | Cibersegurança adequada | ❌ | ✅ |
 
-**Nota:** Quem usa GPAI (Nodeflow usa Gemini) é Deployer, não Provider do modelo. As obrigações GPAI recaem sobre Google/OpenAI/Anthropic.
+**Nota:** Quem usa GPAI (Nodeflow usa Gemini) é Deployer, não Provider do modelo. As obrigações GPAI recaem sobre Google/OpenAI/Anthropic, e são aplicáveis desde **Ago 2025** (não Ago 2026 — ver correção na Secção 2).
 
 ---
 
