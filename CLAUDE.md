@@ -56,6 +56,14 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 17 — o que foi feito (Jul 2026)
+
+**`ai-na-formacao` — nova secção "Pensamento Crítico — Modelo Pedagógico UAb (2026)":**
+- Extraída de infográfico do Modelo Pedagógico da Universidade Aberta (2026), partilhado pelo utilizador
+- Decisão: atualizar skill existente em vez de criar nova — mesmo domínio (formadores/professores), mesmo público, preenche uma lacuna (framework de pensamento crítico) que a skill ainda não cobria
+- Conteúdo: definição, porquê é necessário face à IAGen, o que permite, o que envolve, e 3 propostas de promoção (análise de problemas reais, debates argumentativos, integração interdisciplinar)
+- Ligado ao "Design de avaliação resistente a IA" já existente — complementa-o ao ativar o pensamento crítico como competência a treinar durante a sessão, não só a testar na avaliação
+
 ### Sessão 16 — o que foi feito (Jul 2026)
 
 **`aiact` — correção factual (22 Jul 2026):**

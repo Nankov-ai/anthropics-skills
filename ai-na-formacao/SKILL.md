@@ -110,6 +110,32 @@ Para comunicar limites com mais precisão do que "proibido" ou "permitido":
 
 ---
 
+## Pensamento Crítico — Modelo Pedagógico UAb (2026)
+
+O pensamento crítico é uma competência fundamental para a participação na sociedade, o exercício da cidadania, o questionamento do meio envolvente e a atuação responsável em contextos académicos, profissionais e sociais. Num cenário de dependência crescente de ferramentas de IA generativa, torna-se cada vez mais relevante capacitar os formandos para avaliarem criticamente os resultados produzidos por essas ferramentas — sem isso, "convidar a IA para a mesa" (ver Co-inteligência acima) degenera em aceitação acrítica do output.
+
+**O que permite:**
+- Estruturar um raciocínio reflexivo e analítico
+- Sustentar uma análise rigorosa da informação
+- Orientar para a tomada de consciência e de decisão, incluindo a resolução fundamentada de problemas
+
+**O que envolve:**
+- Capacidades de análise, avaliação e questionamento
+- Autonomia intelectual
+- Desenvolvimento académico, profissional e social dos formandos
+
+### Propostas para a promoção do pensamento crítico
+
+| Proposta | O que é |
+|---|---|
+| **Análise de problemas reais** | Usar estudos de caso e problemas do mundo real para que os formandos pratiquem identificação, análise e interpretação de dados, questionando pressupostos — incluindo os presentes em dados gerados por IA — e propondo soluções |
+| **Debates argumentativos** | Promover debates que estimulem a capacidade de argumentar com base em evidências e considerar perspetivas diversas, reforçando a tomada de decisões fundamentadas mesmo perante informação gerada automaticamente |
+| **Integração interdisciplinar** | Incentivar a conexão entre áreas disciplinares, permitindo que os formandos interpretem informação em diferentes contextos e desenvolvam uma visão sistémica que lhes permita dialogar criticamente com o conhecimento produzido tanto por humanos como por sistemas de IA |
+
+**Para usar:** estas três propostas complementam o "Design de avaliação resistente a IA" abaixo — em vez de só desenhar avaliação que a IA resolve mal, ativam o pensamento crítico diretamente como competência a treinar durante a sessão, não só a testar na avaliação final.
+
+---
+
 ## Design de avaliação resistente a IA
 
 Proibir IA resolve pouco — é impossível de controlar e ignora a realidade. Redesenhar a avaliação é mais eficaz.
@@ -226,6 +252,7 @@ Mapa de referência para identificar onde a IA pode apoiar o trabalho docente. �
 | Avaliar o nível de integração da tecnologia | Modelo SAMR |
 | Definir regras de uso de IA para formandos | Taxonomia de uso + RGPD |
 | Redesenhar uma avaliação | Design de avaliação resistente a IA |
+| Treinar pensamento crítico face à IA | Pensamento Crítico — Modelo Pedagógico UAb |
 | Mapear todas as áreas onde a IA pode ajudar | 12 Dimensões |
 | Apresentar dados sobre IA no ensino | Secção "O contexto real" |
 | Criar recursos visuais pedagógicos com IA | Skill `visual-ia-educacao` |
