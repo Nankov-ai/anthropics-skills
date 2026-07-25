@@ -56,6 +56,16 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 18 — o que foi feito (Jul 2026)
+
+**`essencialismo` — nova skill, baseada em "Essentialism" de Greg McKeown:**
+- Investigação prévia confirmou que um resumo do livro não justificava skill própria; construída como ferramenta de decisão aplicável, não conteúdo estático
+- 3 modos ligados entre si:
+  - **Modo 1 — Filtro de Decisão**: teste dos 90% (critério extremo), teste de trade-off, veredito obrigatório SIM/NÃO com exceção prática para casos fronteiriços
+  - **Modo 2 — Não Gracioso**: 4 técnicas (sim lento, sim parcial, não direto, não firme repetido), estrutura de mensagem em 5 passos, templates PT para cliente/chefia/colega/informal/follow-up
+  - **Modo 3 — Auditoria de Compromissos**: teste Uncommit (ignora custo afundado), tabela de classificação vital few/trivial many, 4 ações (Manter/Cortar/Delegar/Renegociar), fecho sempre acionável que liga ao Modo 2 para redigir as recusas
+- Instalada em `~/.claude/skills/essencialismo/`
+
 ### Sessão 17 — o que foi feito (Jul 2026)
 
 **`ai-na-formacao` — nova secção "Pensamento Crítico — Modelo Pedagógico UAb (2026)":**
