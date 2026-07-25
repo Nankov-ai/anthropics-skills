@@ -65,6 +65,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
   - **Modo 2 — Não Gracioso**: 4 técnicas (sim lento, sim parcial, não direto, não firme repetido), estrutura de mensagem em 5 passos, templates PT para cliente/chefia/colega/informal/follow-up
   - **Modo 3 — Auditoria de Compromissos**: teste Uncommit (ignora custo afundado), tabela de classificação vital few/trivial many, 4 ações (Manter/Cortar/Delegar/Renegociar), fecho sempre acionável que liga ao Modo 2 para redigir as recusas
 - Instalada em `~/.claude/skills/essencialismo/`
+- **Refinamento pós-lançamento**: Passo 1 do Modo 3 passa a recolher a contraparte de cada compromisso (cliente/chefia/colega/informal); Passo 4 aponta diretamente a técnica e template do Modo 2 a usar por item, em vez de remeter genericamente ao modo
 
 ### Sessão 17 — o que foi feito (Jul 2026)
 
