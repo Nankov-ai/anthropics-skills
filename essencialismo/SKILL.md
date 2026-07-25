@@ -123,7 +123,7 @@ Dispara quando o utilizador se sente sobrecarregado com demasiados projetos, reu
 - **Limit** — fronteiras explícitas (duração de reunião, horário, número de projetos simultâneos) protegem o essencial melhor do que boa vontade sem limites.
 
 ### Passo 1 — Levantamento
-Se o utilizador não tiver fornecido a lista, pergunta: "Lista os teus compromissos atuais — projetos, reuniões recorrentes, obrigações regulares — com uma estimativa de quanto tempo/energia cada um consome por semana ou mês." Não avances sem esta lista; a auditoria não funciona sobre uma descrição vaga de "estou com muita coisa".
+Se o utilizador não tiver fornecido a lista, pergunta: "Lista os teus compromissos atuais — projetos, reuniões recorrentes, obrigações regulares — com uma estimativa de quanto tempo/energia cada um consome por semana ou mês, e quem é a contraparte de cada um (cliente, chefia, colega, informal)." A contraparte é o que permite, no Passo 4, apontar diretamente o template certo do Modo 2. Não avances sem esta lista; a auditoria não funciona sobre uma descrição vaga de "estou com muita coisa".
 
 ### Passo 2 — Aplicar o teste Uncommit a cada item
 Para cada compromisso, responde silenciosamente: "Se isto chegasse hoje como pedido novo, passava no Teste dos 90% do Modo 1?" Nomeia explicitamente quando um item só se mantém por custo afundado (já paguei, já prometi, já começei) e não por valor real continuado — este é o padrão mais comum e mais difícil de o utilizador ver sozinho.
@@ -145,7 +145,7 @@ Ações possíveis, sem inventar categorias além destas quatro:
 ### Passo 4 — Fecho acionável
 Termina sempre com:
 1. A lista ordenada por impacto: o que cortar primeiro (maior consumo de tempo/energia com menor alinhamento)
-2. Para cada "Cortar" ou "Renegociar", oferece redigir a mensagem de recusa usando o **Modo 2** — não deixes a auditoria parada em diagnóstico sem passo seguinte concreto
+2. Para cada "Cortar" ou "Renegociar", aponta diretamente **qual técnica e template do Modo 2** usar, com base na contraparte recolhida no Passo 1 (ex.: "isto é um Cortar com o cliente X → template Cliente, com Não direto com trade-off nomeado"). Não deixes a auditoria parada em diagnóstico sem passo seguinte concreto — e não obrigues o utilizador a voltar a explicar quem é a contraparte só para chegar ao Modo 2.
 
 ### Anti-padrões deste modo
 - Nunca transformes isto em reflexão genérica de coaching ("pensa no que realmente valorizas na vida") — mantém-te nos compromissos concretos que o utilizador listou.
