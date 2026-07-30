@@ -56,6 +56,15 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 19 — o que foi feito (Jul 2026)
+
+**`steelman` — skill de terceiros instalada:**
+- Origem: [techiejd/claude-skill-steelman](https://github.com/techiejd/claude-skill-steelman) (MIT), clonada diretamente do GitHub
+- Técnica de pressure-testing de decisões de alto risco (arquitetura, tecnologia, modelo de negócio, pivots estratégicos): identifica pontos cegos na escolha já feita, seleciona 2-3 alternativas mais fortes, argumenta cada uma a sério (não um "devil's advocate" fraco), avalia honestamente se a escolha original sobreviveu, e termina com Proceder/Reconsiderar/Investigar
+- Regras anti-sicofantia explícitas: nunca fecha com reasseguramento, nunca enfraquece alternativas de propósito, nunca as classifica como piores só para confortar
+- Verificação de segurança: sem código executável, sem chamadas de rede escondidas, sem prompt injection — só instruções de instalação legítimas no README
+- Instalada em `steelman/` (repo) e `~/.claude/skills/steelman/` (ativa), com LICENSE e README originais preservados
+
 ### Sessão 18 — o que foi feito (Jul 2026)
 
 **`essencialismo` — nova skill, baseada em "Essentialism" de Greg McKeown:**
