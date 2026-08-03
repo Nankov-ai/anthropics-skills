@@ -86,6 +86,26 @@ Para sistemas de **Risco Limitado** (chatbots, geração de conteúdo):
 **Apps sem IA generativa (não precisam):** Notas de Despesa, Vocaliz, HealHour, English Adventure, Treino Ocular, Automagic Mail ✅  
 **A verificar:** Faturix ⚠️
 
+### 6.1 Ícones oficiais da UE para rotular conteúdo gerado por IA (Art. 50.4)
+
+A Comissão Europeia disponibiliza um conjunto de ícones gratuitos para rotular conteúdo IA, como forma de apoiar o cumprimento do **Art. 50.4** (não são obrigatórios em si — o que é obrigatório é a divulgação; os ícones são uma ferramenta opcional para o fazer).
+
+**Quando a divulgação é obrigatória:**
+- **Deepfakes** — imagem, áudio ou vídeo gerado/manipulado por IA que se assemelhe a pessoas, objetos, locais, entidades ou eventos reais
+- **Texto gerado por IA publicado** sobre assuntos de interesse público, sem revisão humana e sem que nenhuma entidade assuma responsabilidade editorial
+
+**3 tipos de ícone:**
+1. **Ícone base** — IA envolvida na criação de deepfakes ou texto
+2. **Totalmente gerado por IA** — conteúdo inteiramente produzido por IA, sem criação ou controlo editorial humano
+3. **Parcialmente modificado por IA** — conteúdo humano pré-existente alterado por IA para se tornar deepfake ou texto de interesse público
+
+**Exceções à obrigação de divulgação:**
+- Obras claramente artísticas, criativas, satíricas ou ficcionais (com divulgação adequada que não prejudique a fruição da obra)
+- Usos autorizados por lei para deteção/prevenção criminal
+- Texto de IA sujeito a revisão humana ou controlo editorial, onde alguém assume responsabilidade editorial
+
+**Nota para Nodeflow:** os ícones são um mecanismo visual conveniente, mas o aviso textual já implementado nas apps (ver lista acima) cumpre o Art. 50 de forma equivalente — adotar os ícones oficiais é opcional, não substitui nem acrescenta obrigação legal nova.
+
 ---
 
 ## 7. Multas

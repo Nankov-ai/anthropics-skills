@@ -56,6 +56,16 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 20 — o que foi feito (Jul 2026)
+
+**`aiact` — nova subsecção 6.1, ícones oficiais da UE (Art. 50.4):**
+- Fonte: https://digital-strategy.ec.europa.eu/pt/policies/eu-icons-labelling-ai-generated-content
+- Ícones gratuitos da Comissão Europeia para rotular conteúdo IA — ferramenta opcional, a obrigação legal (divulgação) continua a ser o que conta, não o ícone em si
+- 3 tipos de ícone: base, totalmente gerado por IA, parcialmente modificado por IA
+- Obrigatório para: deepfakes (imagem/áudio/vídeo que se assemelhe a pessoas/entidades reais) e texto de interesse público sem revisão editorial humana
+- Exceções: obras artísticas/satíricas/ficcionais, uso autorizado para deteção criminal, texto com revisão editorial humana
+- Nota Nodeflow: aviso textual já implementado nas apps cumpre o Art. 50 de forma equivalente; adotar os ícones é opcional
+
 ### Sessão 19 — o que foi feito (Jul 2026)
 
 **`steelman` — skill de terceiros instalada:**
