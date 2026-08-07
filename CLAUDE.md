@@ -56,6 +56,17 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 21 — o que foi feito (Ago 2026)
+
+**`security-review` — nova secção "AI Agent Deployment Security":**
+- Fonte: [Four Ways to Deploy More Secure AI Agents](https://developer.nvidia.com/blog/four-ways-to-deploy-more-secure-ai-agents/) (NVIDIA Developer Blog / NVIDIA AI Red Team)
+- Decisão: não criar skill nova — encaixa em `security-review` (já dispara para "security audit"), distinta do checklist OWASP porque audita **arquitetura de deployment do agente**, não código já escrito
+- 4 controlos: acesso ao agente, limitação de execução de código (sandbox + allow-list), egresso de rede default-deny, gestão de segredos (nunca em plaintext/env vars, tokens efémeros)
+- Princípio central: controlos têm de ser aplicados fora do control plane do modelo — defesas baseadas em prompt não são controlos de segurança
+- 3 padrões de ataque documentados: social engineering do agente, frog-boiling, misdirection via workflows legítimos
+- Descrição da skill atualizada para disparar também em "is this agent safe to deploy", "secure agent tools"
+- **Bug corrigido de passagem**: `security-review/SKILL.md` tinha um BOM (byte order mark) no início do ficheiro, antes do `---` do frontmatter, o que impedia o parser de skills de ler corretamente `name`/`description` — a skill aparecia sem descrição na lista. Corrigido nos dois locais (repo + `~/.claude/skills/`)
+
 ### Sessão 20 — o que foi feito (Jul 2026)
 
 **`aiact` — nova subsecção 6.1, ícones oficiais da UE (Art. 50.4):**
