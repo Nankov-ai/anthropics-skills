@@ -56,6 +56,19 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 # /reload-skills
 ```
 
+### Sessão 22 — o que foi feito (Ago 2026)
+
+**`apprentice-cocreate` — nova skill, padrões de co-criação com chatbots:**
+- Origem: utilizador partilhou uma infografia "How to turn any book into a Claude Skill" e pediu para aplicar o método ao livro *The Learner's Apprentice: AI and the Amplification of Human Creativity* (Ken Kahn, PhD)
+- O único material acessível do livro foi um PDF de índice de recursos ("Chatbot logs") — uma lista de dezenas de apps/histórias/experiências referidas nos capítulos, sem o texto do método em si
+- **Decisão importante**: aplicado o próprio teste da infografia ("consegues descrever o método em passos numerados?") — o livro revelou-se uma **antologia de estudos de caso**, não um método fixo passo-a-passo. Em vez de forçar um `/book-diagnose` + `/book-apply` como a infografia sugere para livros de método, criou-se uma skill de **padrões de exploração/inspiração**
+- **9 padrões extraídos** do catálogo (generalizados, sem precisar de conhecer a fonte): começar simples e camada a camada; prompts guiados em vez de um pedido gigante; entrevista guiada pelo chatbot antes de gerar; comparação multi-chatbot; personas/roleplay (debate, professor-aluno); remix de género (mesma ideia em sonetos, peças, receitas, notícias); ciclos de crítica iterativa; mostrar raciocínio/esconder complexidade (contextos de aprendizagem); testar nos limites
+- **Correção pós-avaliação** (via skill-evaluator): a descrição inicial mencionava o nome do livro como gatilho, criando risco de falso positivo em pedidos de "resumo do livro" (que devem ficar fora do âmbito da skill). Pedido explícito do utilizador para a skill nunca fazer referência ao livro/autor — nem na descrição nem no corpo — funciona apenas como conhecimento interiorizado, sem o utilizador precisar de conhecer a fonte
+- Testada manualmente com 4 prompts (jogo educativo, história ilustrada, simulação de ecossistema, debate em sala de aula) — todos produziram: escolha de 2-3 padrões + prompt pronto a colar + próximo passo sugerido
+- Avaliação com `skill-evaluator`: descrição PASS, ~1.060 tokens de corpo (bem dentro do limite de 5.000), draft tier antes da correção do falso positivo — não recorrido a pipeline completo de sub-agentes/benchmark (fora do âmbito da sessão)
+- Instalada em `apprentice-cocreate/` (repo) e `C:\Users\Utilizador\.claude\skills\apprentice-cocreate\` (ativa)
+- **Revisão de routing (antes do commit)**: detetada sobreposição real com `vibecoding` (ambas disparam para "quero criar um jogo/app com IA"). Fronteira clarificada na descrição: `apprentice-cocreate` cobre os padrões *conversacionais/criativos* da co-criação (entrevista guiada, multi-chatbot, roleplay, remix de género); `vibecoding` cobre a *engenharia de prompt técnica* para software (CoT, delimitadores, arquitetura). Padrão 2 do corpo passa a remeter explicitamente para `vibecoding` quando o projeto tem profundidade técnica real
+
 ### Sessão 21 — o que foi feito (Ago 2026)
 
 **`security-review` — nova secção "AI Agent Deployment Security":**
@@ -206,6 +219,7 @@ Copy-Item -Path "c:\projetos\Skills\Claude\<skill-name>" `
 
 | Skill | Origem |
 |---|---|
+| apprentice-cocreate | Padrões de co-criação com chatbots (começar simples, prompts guiados, entrevista, multi-chatbot, personas, remix de género, crítica iterativa) — generalizada a partir de análise do índice de recursos de *The Learner's Apprentice* (Ken Kahn), sem referenciar o livro/autor na skill final (Ago 2026) |
 | linkedin-profile-builder | Criada de 2 perfis de referência analisados — headline, About, dual-identity (corporate + founder), conteúdo (Jul 2026) |
 | vibecoding | Criada de curso Vibecoding (Udemy) — 8 tipos de prompt para construir software com IA, CoT, biblioteca de prompts (Jul 2026) |
 | agent-prompt-builder | Original; estendida com padrão Lovable/Bolt/v0 (Jul 2026) e padrão Manus/superagente (Jul 2026) |
